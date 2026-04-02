@@ -1,13 +1,25 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../data/portfolioData";
 
 export default function Navbar({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const goToSection = (sectionId) => {
     setIsOpen(false);
@@ -24,9 +36,13 @@ export default function Navbar({ activeSection }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 px-4 pt-4 sm:px-6">
+    <header className="fixed left-0 top-0 z-50 w-full px-4 pt-4 sm:px-6">
       <div className="section-shell">
-        <div className="glass-panel flex items-center justify-between rounded-full px-5 py-3 sm:px-6">
+        <div
+          className={`flex items-center justify-between rounded-full border border-white/70 bg-white/70 px-5 py-3 shadow-sm backdrop-blur-md transition-all duration-300 sm:px-6 ${
+            isScrolled ? "shadow-md" : ""
+          }`}
+        >
           <Link
             to="/"
             className="flex items-center gap-3 text-sm font-semibold tracking-[0.24em] text-charcoal"
@@ -89,7 +105,7 @@ export default function Navbar({ activeSection }) {
             transition={{ duration: 0.22, ease: "easeOut" }}
             className="section-shell mt-3 md:hidden"
           >
-            <div className="glass-panel rounded-[1.75rem] p-3">
+            <div className="rounded-[1.75rem] border border-white/70 bg-white/70 p-3 shadow-sm backdrop-blur-md">
               {navItems.map((item) => (
                 <button
                   key={item.id}
