@@ -4,7 +4,7 @@ import { contactLinks } from "../data/portfolioData";
 
 export default function ContactSection() {
   return (
-    <AnimatedSection id="contact" className="pb-24">
+    <AnimatedSection id="contact">
       <div className="section-shell">
         <div className="section-card p-8 sm:p-10 lg:p-12">
           <SectionHeader

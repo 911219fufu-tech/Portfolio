@@ -14,7 +14,7 @@ export default function AnimatedSection({
     <motion.section
       id={id}
       data-section="true"
-      className={`min-h-screen scroll-mt-28 py-20 sm:py-24 ${className}`}
+      className={`scroll-mt-24 py-20 ${className}`}
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.24 }}

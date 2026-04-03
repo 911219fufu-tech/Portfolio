@@ -15,7 +15,7 @@ export default function HeroSection() {
     <section
       id="home"
       data-section="true"
-      className="section-shell min-h-screen scroll-mt-28 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pt-20"
+      className="section-shell flex min-h-[calc(100vh-5rem)] scroll-mt-24 items-center py-16 sm:py-20"
     >
       <div className="grid items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16">
         <motion.div
@@ -23,7 +23,9 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="font-display text-xl text-moss">I design and build modern, user-centered web applications.</p>
+          <p className="font-display text-xl text-moss">
+            I design and build modern, user-centered web applications.
+          </p>
           <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-tight text-charcoal sm:text-6xl lg:text-7xl">
             Hi, I&apos;m Joyce Fu
           </h1>
@@ -60,7 +62,10 @@ export default function HeroSection() {
               "Product thinking",
               "Responsive systems",
             ].map((item) => (
-              <div key={item} className="glass-panel rounded-3xl px-5 py-4 text-sm font-medium text-stone-700">
+              <div
+                key={item}
+                className="glass-panel rounded-3xl px-5 py-4 text-sm font-medium text-stone-700"
+              >
                 {item}
               </div>
             ))}

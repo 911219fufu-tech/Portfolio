@@ -104,13 +104,15 @@ export default function App() {
   }, [location.pathname]);
 
   return (
-    <div className="relative overflow-hidden pt-24">
+    <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.8),transparent_40%),radial-gradient(circle_at_top_right,rgba(216,167,177,0.26),transparent_30%)]" />
       <Navbar activeSection={activeSection} />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects/:slug" element={<ProjectDetailPage />} />
-      </Routes>
+      <main className="pt-20 sm:pt-24">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }
