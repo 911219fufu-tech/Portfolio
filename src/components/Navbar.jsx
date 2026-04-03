@@ -1,14 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navItems } from "../data/portfolioData";
 
-export default function Navbar({ activeSection }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,20 +18,6 @@ export default function Navbar({ activeSection }) {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const goToSection = (sectionId) => {
-    setIsOpen(false);
-
-    if (!isHome) {
-      navigate(`/#${sectionId}`);
-      return;
-    }
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full px-4 pt-4 sm:px-6">
@@ -55,13 +39,15 @@ export default function Navbar({ activeSection }) {
 
           <nav className="hidden items-center gap-2 md:flex">
             {navItems.map((item) => {
-              const isActive = isHome && activeSection === item.id;
+              const isActive =
+                location.pathname === item.path ||
+                (item.path === "/projects" &&
+                  location.pathname.startsWith("/project/"));
 
               return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => goToSection(item.id)}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                     isActive
                       ? "bg-charcoal text-white"
@@ -69,7 +55,7 @@ export default function Navbar({ activeSection }) {
                   }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               );
             })}
           </nav>
@@ -106,16 +92,27 @@ export default function Navbar({ activeSection }) {
             className="section-shell mt-3 md:hidden"
           >
             <div className="rounded-[1.75rem] border border-white/70 bg-white/70 p-3 shadow-sm backdrop-blur-md">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => goToSection(item.id)}
-                  className="block w-full rounded-2xl px-4 py-3 text-left text-sm font-medium text-stone-700 transition hover:bg-white hover:text-charcoal"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const isActive =
+                  location.pathname === item.path ||
+                  (item.path === "/projects" &&
+                    location.pathname.startsWith("/project/"));
+
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`block w-full rounded-2xl px-4 py-3 text-left text-sm font-medium transition ${
+                      isActive
+                        ? "bg-charcoal text-white"
+                        : "text-stone-700 hover:bg-white hover:text-charcoal"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         ) : null}

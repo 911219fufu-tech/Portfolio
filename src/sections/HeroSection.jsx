@@ -1,16 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import portrait from "../assets/profile-portrait.svg";
 import { heroRoles } from "../data/portfolioData";
 import TypingText from "../components/TypingText";
 
 export default function HeroSection() {
-  const scrollTo = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
     <section
       id="home"
@@ -40,20 +34,18 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <button
-              type="button"
-              onClick={() => scrollTo("projects")}
+            <Link
+              to="/projects"
               className="rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white transition hover:bg-moss"
             >
               View Projects
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollTo("contact")}
+            </Link>
+            <Link
+              to="/contact"
               className="rounded-full border border-stone-200 bg-white px-6 py-3 text-sm font-medium text-stone-700 transition hover:border-moss hover:text-moss"
             >
               Contact Me
-            </button>
+            </Link>
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-3">

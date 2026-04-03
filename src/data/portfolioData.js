@@ -1,10 +1,10 @@
 export const navItems = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "education", label: "Education" },
-  { id: "skills", label: "Skills" },
-  { id: "contact", label: "Contact" },
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/projects", label: "Projects" },
+  { path: "/education", label: "Education" },
+  { path: "/skills", label: "Skills" },
+  { path: "/contact", label: "Contact" },
 ];
 
 export const heroRoles = [
