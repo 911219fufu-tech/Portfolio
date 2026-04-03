@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import portrait from "../assets/profile-portrait.svg";
+import portrait from "../assets/joyce-hero.JPG";
 import { heroRoles } from "../data/portfolioData";
 import TypingText from "../components/TypingText";
 
@@ -73,7 +73,7 @@ export default function HeroSection() {
           <div className="section-card overflow-hidden rounded-[2rem] p-4 sm:p-5">
             <img
               src={portrait}
-              alt="Stylized portrait of Joyce Fu"
+              alt="Portrait of Joyce Fu"
               className="w-full rounded-[1.7rem] object-cover"
             />
           </div>
