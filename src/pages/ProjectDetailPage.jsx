@@ -1,11 +1,16 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import ProjectVisual from "../components/ProjectVisual";
 import { projects } from "../data/portfolioData";
 
 export default function ProjectDetailPage() {
-  const { slug } = useParams();
-  const project = projects.find((entry) => entry.slug === slug);
+  const { id } = useParams();
+  const project = projects.find((entry) => entry.slug === id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return (

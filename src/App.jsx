@@ -110,7 +110,7 @@ export default function App() {
       <main className="pt-20 sm:pt-24">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects/:slug" element={<ProjectDetailPage />} />
+          <Route path="/project/:id" element={<ProjectDetailPage />} />
         </Routes>
       </main>
     </div>

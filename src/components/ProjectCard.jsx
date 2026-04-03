@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
       className="group h-full"
     >
       <Link
-        to={`/projects/${project.slug}`}
+        to={`/project/${project.slug}`}
         className="section-card flex h-full flex-col overflow-hidden p-4 sm:p-5"
       >
         <div className="overflow-hidden rounded-[1.75rem]">
