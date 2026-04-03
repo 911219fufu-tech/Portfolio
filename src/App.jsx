@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { navItems } from "./data/portfolioData";
 import HomePage from "./pages/HomePage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+
+const sectionIds = ["home", "about", "projects", "education", "skills", "contact"];
 
 export default function App() {
   const location = useLocation();
@@ -34,25 +35,67 @@ export default function App() {
       return undefined;
     }
 
-    const targets = navItems
-      .map((item) => document.getElementById(item.id))
+    const sectionState = new Map();
+    const targets = sectionIds
+      .map((id) => document.getElementById(id))
       .filter(Boolean);
+
+    const resolveActiveSection = () => {
+      const visibleSections = sectionIds
+        .map((id) => ({
+          id,
+          ...(sectionState.get(id) ?? {
+            isIntersecting: false,
+            ratio: 0,
+            top: Number.POSITIVE_INFINITY,
+          }),
+        }))
+        .filter((section) => section.isIntersecting);
+
+      if (!visibleSections.length) {
+        return;
+      }
+
+      visibleSections.sort((sectionA, sectionB) => {
+        if (sectionB.ratio !== sectionA.ratio) {
+          return sectionB.ratio - sectionA.ratio;
+        }
+
+        return Math.abs(sectionA.top) - Math.abs(sectionB.top);
+      });
+
+      const nextSection = visibleSections[0].id;
+      setActiveSection((currentSection) =>
+        currentSection === nextSection ? currentSection : nextSection,
+      );
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          sectionState.set(entry.target.id, {
+            isIntersecting: entry.isIntersecting,
+            ratio: entry.intersectionRatio,
+            top: entry.boundingClientRect.top,
+          });
         });
+
+        resolveActiveSection();
       },
       {
-        rootMargin: "-45% 0px -45% 0px",
-        threshold: 0.1,
+        rootMargin: "-18% 0px -42% 0px",
+        threshold: [0.15, 0.3, 0.45, 0.6, 0.75],
       },
     );
 
-    targets.forEach((target) => observer.observe(target));
+    targets.forEach((target) => {
+      sectionState.set(target.id, {
+        isIntersecting: false,
+        ratio: 0,
+        top: target.getBoundingClientRect().top,
+      });
+      observer.observe(target);
+    });
 
     return () => {
       targets.forEach((target) => observer.unobserve(target));

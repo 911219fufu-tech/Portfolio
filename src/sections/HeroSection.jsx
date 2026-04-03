@@ -15,7 +15,7 @@ export default function HeroSection() {
     <section
       id="home"
       data-section="true"
-      className="section-shell scroll-mt-28 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pt-20"
+      className="section-shell min-h-screen scroll-mt-28 pb-16 pt-10 sm:pb-20 sm:pt-16 lg:pt-20"
     >
       <div className="grid items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-16">
         <motion.div
