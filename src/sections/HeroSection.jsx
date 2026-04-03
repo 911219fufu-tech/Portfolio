@@ -18,7 +18,7 @@ export default function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="font-display text-xl text-moss">
-            I design and build modern, user-centered web applications.
+            I create intuitive digital experiences through design & engineering.
           </p>
           <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-tight text-charcoal sm:text-6xl lg:text-7xl">
             Hi, I&apos;m Joyce Fu
@@ -29,8 +29,7 @@ export default function HeroSection() {
           </div>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-stone-600">
-            I build modern, responsive web applications with a focus on user
-            experience and clean design.
+            I build user-focused web applications with strong frontend engineering and clean, scalable design.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -50,9 +49,9 @@ export default function HeroSection() {
 
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[
-              "Design-led engineering",
-              "Product thinking",
-              "Responsive systems",
+              "User-Centered Design",
+              "Frontend Engineering",
+              "System Thinking",
             ].map((item) => (
               <div
                 key={item}
