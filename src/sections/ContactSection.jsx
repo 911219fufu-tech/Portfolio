@@ -3,7 +3,7 @@ import { contactLinks } from "../data/portfolioData";
 
 function ContactIcon({ type }) {
   const commonProps = {
-    className: "h-6 w-6 text-[#7A8B7A]",
+    className: "h-8 w-8 text-[#7A8B7A]",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "1.8",
@@ -23,7 +23,7 @@ function ContactIcon({ type }) {
   if (type === "linkedin") {
     return (
       <svg
-        className="h-6 w-6"
+        className="h-8 w-8"
         viewBox="0 0 24 24"
         aria-hidden="true"
       >
@@ -51,49 +51,52 @@ function ContactIcon({ type }) {
 export default function ContactSection() {
   return (
     <AnimatedSection id="contact" className="py-20">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-10">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#7A8B7A]">
-            CONTACT
-          </p>
-          <h2 className="mt-4 text-4xl font-semibold tracking-tight text-[#2E2E2E] sm:text-5xl">
-            Let&apos;s connect.
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-10">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-[#2E2E2E] sm:text-4xl">
+            Feel free to contact me!
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-stone-600 sm:text-lg">
-            I&apos;m open to frontend, product design, and software engineering
-            opportunities where thoughtful interaction and strong execution both
-            matter.
+          <p className="mt-6 max-w-4xl text-base leading-8 text-stone-600 sm:text-[1.35rem] sm:leading-[1.8]">
+            I&apos;d love to hear from you. Whether you have a question, a
+            project idea, or just want to connect, feel free to reach out.
+            I&apos;ll get back to you as soon as possible.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
           {contactLinks.map((link) => (
             <div
               key={link.label}
-              className="group rounded-[1.9rem] border border-white/70 bg-white/75 p-8 shadow-soft backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-card"
+              className="group text-center"
             >
               <a
                 href={link.href}
                 target={link.type === "linkedin" ? "_blank" : undefined}
                 rel={link.type === "linkedin" ? "noreferrer" : undefined}
-                className="block"
+                className="block transition-transform duration-300 group-hover:-translate-y-1"
               >
-                <div className="flex justify-center md:justify-start">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+                <div className="flex justify-center">
+                  <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-[0_14px_45px_rgba(46,46,46,0.1)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_20px_55px_rgba(46,46,46,0.14)]">
                     <ContactIcon type={link.type} />
                   </div>
                 </div>
 
-                <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-stone-500">
+                <p className="mt-8 text-sm font-extrabold uppercase tracking-[0.16em] text-[#2E2E2E] sm:text-[1.6rem]">
                   {link.label}
                 </p>
-                <p className="mt-3 text-lg font-medium text-stone-700 transition-colors duration-300 group-hover:text-[#7A8B7A]">
+                <p className="mt-4 text-base text-stone-600 transition-colors duration-300 group-hover:text-[#7A8B7A] sm:text-[1.1rem]">
                   {link.value}
                 </p>
               </a>
             </div>
           ))}
-          </div>
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <p className="bg-[rgba(216,167,177,0.28)] px-4 py-2 text-center text-lg font-extrabold uppercase tracking-[0.08em] text-[#2E2E2E] sm:text-[1.8rem]">
+            Thanks for patience!
+          </p>
+        </div>
       </div>
     </AnimatedSection>
   );
