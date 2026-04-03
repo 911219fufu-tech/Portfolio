@@ -45,14 +45,19 @@ export default function EducationCard({ item }) {
               ))}
             </div>
 
-            <a
-              href={item.transcriptUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-medium text-white transition hover:bg-moss"
-            >
-              View Transcript
-            </a>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              {item.transcriptLinks.map((transcript) => (
+                <a
+                  key={transcript.label}
+                  href={transcript.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-medium text-white transition hover:bg-moss"
+                >
+                  {transcript.label}
+                </a>
+              ))}
+            </div>
           </motion.div>
         ) : null}
       </AnimatePresence>

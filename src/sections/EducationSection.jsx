@@ -9,8 +9,8 @@ export default function EducationSection() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="Education"
-          title="Academic grounding in computer science and human-centered systems."
-          description="A technical foundation shaped by both engineering rigor and interaction-focused coursework."
+          title="Computer science foundation with a focus on web systems and human-centered design."
+          description="Building a strong technical base through engineering and interaction-focused coursework."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

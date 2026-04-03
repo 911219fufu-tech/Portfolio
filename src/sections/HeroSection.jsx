@@ -30,9 +30,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...textTransition, delay: 0.08 }}
-            className="mt-5 max-w-3xl text-5xl font-semibold tracking-tight text-charcoal sm:text-6xl lg:text-7xl"
+            className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-charcoal sm:text-4xl lg:text-5xl"
           >
-            Hi, I&apos;m Joyce Fu
+            Hi, I&apos;m Jia-Yin(Joyce) Fu
           </motion.h1>
 
           <motion.div

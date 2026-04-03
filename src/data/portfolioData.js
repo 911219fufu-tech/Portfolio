@@ -321,20 +321,34 @@ export const projects = [
 
 export const educationItems = [
   {
-    school: "New York University",
+    school: "New York University, Tandon School of Engineering",
     degree: "M.S. in Computer Science",
-    gpa: "4.0",
+    gpa: "4.0/4.0",
     duration: "Sep 2025 – May 2027",
-    coursework: ["Human Computer Interaction", "Information Visualization"],
-    transcriptUrl: "/transcript-nyu.pdf",
+    coursework: ["Human Computer Interaction", "Information Visualization", "Application Security"],
+    transcriptLinks: [
+      {
+        label: "NYU Transcript",
+        href: "/transcript-nyu.pdf",
+      },
+    ],
   },
   {
     school: "San Francisco State University / Feng Chia University",
     degree: "B.S. Computer Science (Dual Degree)",
-    gpa: "3.9 — Summa Cum Laude",
+    gpa: "3.9/4.0, Summa Cum Laude",
     duration: "Sep 2021 – May 2025",
-    coursework: ["Software Engineering", "Algorithms", "Web Development"],
-    transcriptUrl: "/transcript-dual-degree.pdf",
+    coursework: ["Software Engineering", "Data Structures & Algorithms ", "Web Development"],
+    transcriptLinks: [
+      {
+        label: "SFSU Transcript",
+        href: "/transcript-sfsu.pdf",
+      },
+      {
+        label: "FCU Transcript",
+        href: "/transcript-fcu.pdf",
+      },
+    ],
   },
 ];
 
