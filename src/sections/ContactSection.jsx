@@ -79,7 +79,7 @@ export default function ContactSection() {
                 className="block"
               >
                 <div className="flex justify-center md:justify-start">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-sm transition duration-300 group-hover:scale-105 group-hover:shadow-md">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                     <ContactIcon type={link.type} />
                   </div>
                 </div>

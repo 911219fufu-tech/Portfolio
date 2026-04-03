@@ -394,19 +394,19 @@ export const contactLinks = [
   {
     type: "email",
     label: "Email",
-    value: "joyce.fu.dev@gmail.com",
-    href: "mailto:joyce.fu.dev@gmail.com",
+    value: "jf5456@gmail.com",
+    href: "mailto:jf5456@gmail.com",
   },
   {
     type: "phone",
     label: "Phone",
-    value: "+1 (415) 555-0147",
-    href: "tel:+14155550147",
+    value: "+1 (628) 488-2511",
+    href: "tel:+16284882511",
   },
   {
     type: "linkedin",
     label: "LinkedIn",
     value: "linkedin.com/in/joycefu",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/joyce-fu-30a6b7288/",
   },
 ];
