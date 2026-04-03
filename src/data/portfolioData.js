@@ -392,18 +392,21 @@ export const skillGroups = [
 
 export const contactLinks = [
   {
+    type: "email",
     label: "Email",
     value: "joyce.fu.dev@gmail.com",
     href: "mailto:joyce.fu.dev@gmail.com",
   },
   {
+    type: "phone",
+    label: "Phone",
+    value: "+1 (415) 555-0147",
+    href: "tel:+14155550147",
+  },
+  {
+    type: "linkedin",
     label: "LinkedIn",
     value: "linkedin.com/in/joycefu",
     href: "https://www.linkedin.com/",
-  },
-  {
-    label: "GitHub",
-    value: "github.com/joycefu",
-    href: "https://github.com/",
   },
 ];
