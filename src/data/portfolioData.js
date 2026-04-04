@@ -326,6 +326,8 @@ export const educationItems = [
     gpa: "4.0/4.0",
     duration: "Sep 2025 – May 2027",
     coursework: ["Human Computer Interaction", "Information Visualization", "Application Security"],
+    honors: [],
+    certifications: [],
     transcriptLinks: [
       {
         label: "NYU Transcript",
@@ -339,6 +341,27 @@ export const educationItems = [
     gpa: "3.9/4.0, Summa Cum Laude",
     duration: "Sep 2021 – May 2025",
     coursework: ["Software Engineering", "Data Structures & Algorithms ", "Web Development"],
+    honors: [
+      {
+        label: "Summa Cum Laude (SFSU)",
+        href: "https://commencement.sfsu.edu/sites/default/files/documents/2025-Commencement-Main-Program-Online_accessible.pdf#page=41",
+      },
+      {
+        label: "Academic Excellence Award (Ranked 1st in Department, FCU)",
+        href: "https://commencement.fcu.edu.tw/114award/",
+      },
+      {
+        label: "Dean’s List (5 semesters)",
+        details: [
+          "Dean’s List, SFSU, Fall 2023",
+          "Dean’s List, SFSU, Spring 2024",
+          "Dean’s List, SFSU, Fall 2024",
+          "Dean’s List, FCU, Spring 2023",
+          "Scholarship, FCU, Spring 2023",
+        ],
+      },
+    ],
+    certifications: ["AWS Academy Cloud Foundations (AWS)"],
     transcriptLinks: [
       {
         label: "SFSU Transcript",
