@@ -1,30 +1,142 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import AnimatedSection from "../components/AnimatedSection";
 import SectionHeader from "../components/SectionHeader";
 import { beyondCodingTabs } from "../data/portfolioData";
 
 function PhotographyPanel({ items }) {
+  const scrollRef = useRef(null);
+  const dragStartX = useRef(0);
+  const dragStartScroll = useRef(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateScrollState = () => {
+    const container = scrollRef.current;
+    if (!container) {
+      return;
+    }
+
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    setCanScrollLeft(container.scrollLeft > 4);
+    setCanScrollRight(maxScrollLeft - container.scrollLeft > 4);
+  };
+
+  useEffect(() => {
+    updateScrollState();
+
+    const handleResize = () => updateScrollState();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [items.length]);
+
+  const scrollByCard = (direction) => {
+    const container = scrollRef.current;
+    if (!container) {
+      return;
+    }
+
+    const firstCard = container.querySelector("[data-photo-card='true']");
+    const cardWidth = firstCard
+      ? firstCard.getBoundingClientRect().width + 12
+      : 280;
+
+    container.scrollBy({
+      left: direction * cardWidth,
+      behavior: "smooth",
+    });
+  };
+
+  const handlePointerDown = (event) => {
+    const container = scrollRef.current;
+    if (!container) {
+      return;
+    }
+
+    dragStartX.current = event.clientX;
+    dragStartScroll.current = container.scrollLeft;
+    setIsDragging(true);
+    container.setPointerCapture?.(event.pointerId);
+  };
+
+  const handlePointerMove = (event) => {
+    const container = scrollRef.current;
+    if (!container || !isDragging) {
+      return;
+    }
+
+    const distance = event.clientX - dragStartX.current;
+    container.scrollLeft = dragStartScroll.current - distance;
+  };
+
+  const handlePointerUp = (event) => {
+    const container = scrollRef.current;
+    setIsDragging(false);
+    container?.releasePointerCapture?.(event.pointerId);
+  };
+
   return (
-    <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
-      {items.slice(0, 3).map((item) => (
-        <div
-          key={item.title}
-          className="group overflow-hidden rounded-[1.4rem] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
-        >
+    <div className="group relative">
+      <button
+        type="button"
+        onClick={() => scrollByCard(-1)}
+        className={`absolute left-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 shadow-md backdrop-blur-md transition-all duration-300 md:flex ${
+          canScrollLeft
+            ? "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"
+            : "pointer-events-none opacity-0"
+        }`}
+        aria-label="Scroll photography left"
+      >
+        <span className="text-lg leading-none text-charcoal">‹</span>
+      </button>
+
+      <div
+        ref={scrollRef}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+        onPointerLeave={handlePointerUp}
+        onScroll={updateScrollState}
+        className={`flex gap-3 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+          isDragging ? "cursor-grabbing" : "cursor-grab"
+        }`}
+      >
+        {items.map((item) => (
           <div
-            className="relative aspect-[0.9] overflow-hidden rounded-[1.4rem] p-3 transition duration-300 group-hover:scale-[1.03]"
-            style={{ backgroundImage: item.gradient }}
+            key={item.title}
+            data-photo-card="true"
+            className="group shrink-0 basis-[calc((100%-1.5rem)/3)] overflow-hidden rounded-[1.4rem] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
           >
-            <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/78 p-3 backdrop-blur-md">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-charcoal">
-                {item.title}
-              </p>
-              <p className="mt-1 text-xs text-stone-600">{item.caption}</p>
+            <div
+              className="relative aspect-[0.9] overflow-hidden rounded-[1.4rem] p-3 transition duration-300 group-hover:scale-[1.03]"
+              style={{ backgroundImage: item.gradient }}
+            >
+              <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/78 p-3 backdrop-blur-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-charcoal">
+                  {item.title}
+                </p>
+                <p className="mt-1 text-xs text-stone-600">{item.caption}</p>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      <button
+        type="button"
+        onClick={() => scrollByCard(1)}
+        className={`absolute right-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 shadow-md backdrop-blur-md transition-all duration-300 md:flex ${
+          canScrollRight
+            ? "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"
+            : "pointer-events-none opacity-0"
+        }`}
+        aria-label="Scroll photography right"
+      >
+        <span className="text-lg leading-none text-charcoal">›</span>
+      </button>
     </div>
   );
 }
