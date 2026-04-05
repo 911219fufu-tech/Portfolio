@@ -172,6 +172,7 @@ export default function ProjectDetailPage() {
                   accent={project.accent}
                   image={project.image}
                   className="aspect-[387/199] min-h-0"
+                  showOverlay={false}
                 />
               </div>
             </div>

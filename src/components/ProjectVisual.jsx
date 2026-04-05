@@ -5,6 +5,7 @@ export default function ProjectVisual({
   accent,
   image,
   className = "",
+  showOverlay = true,
 }) {
   if (image) {
     return (
@@ -16,15 +17,19 @@ export default function ProjectVisual({
           alt={`${title} project cover`}
           className="h-full w-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(46,46,46,0.06)_0%,rgba(46,46,46,0.18)_48%,rgba(46,46,46,0.68)_100%)]" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
-            {subtitle}
-          </p>
-          <h3 className="mt-2 text-2xl font-semibold text-white sm:text-[1.75rem]">
-            {title}
-          </h3>
-        </div>
+        {showOverlay ? (
+          <>
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(46,46,46,0.06)_0%,rgba(46,46,46,0.18)_48%,rgba(46,46,46,0.68)_100%)]" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
+                {subtitle}
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold text-white sm:text-[1.75rem]">
+                {title}
+              </h3>
+            </div>
+          </>
+        ) : null}
       </div>
     );
   }
@@ -50,14 +55,16 @@ export default function ProjectVisual({
           <div className="h-20 rounded-2xl bg-white/20" />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/75">
-          {subtitle}
-        </p>
-        <h3 className="mt-2 text-2xl font-semibold text-white sm:text-[1.75rem]">
-          {title}
-        </h3>
-      </div>
+      {showOverlay ? (
+        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/75">
+            {subtitle}
+          </p>
+          <h3 className="mt-2 text-2xl font-semibold text-white sm:text-[1.75rem]">
+            {title}
+          </h3>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import unlmedDetail from "../assets/projects/unlmed-detail.png";
 import unlmtdCover from "../assets/projects/unlmtd-cover.jpeg";
+import readyRecipeCover from "../assets/projects/readyrecipe-cover.jpeg";
+import readyRecipeDetail from "../assets/projects/readyrecipe-detail.jpeg";
 
 export const navItems = [
   { path: "/", label: "Home" },
@@ -417,6 +419,8 @@ export const projects = [
   discipline: "UX/UI",
   track: "UX/Product Projects",
   timeline: "Sep. 2024 - Jan. 2025",
+  cardImage: readyRecipeCover,
+  image: readyRecipeDetail,
 
   shortDescription:
     "A recipe-to-action web experience that helps users move from discovering meals to planning and selecting ingredients seamlessly.",
@@ -493,6 +497,7 @@ export const projects = [
     title: "UNLMTD",
     discipline: "UX/UI",
     track: "UX/Product Projects",
+    timeline: "Feb 2025 - Jun 2025",
     cardImage: unlmtdCover,
     image: unlmedDetail,
 
