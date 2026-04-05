@@ -1,3 +1,6 @@
+import unlmedDetail from "../assets/projects/unlmed-detail.png";
+import unlmtdCover from "../assets/projects/unlmtd-cover.jpeg";
+
 export const navItems = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
@@ -217,6 +220,7 @@ export const projects = [
   title: "Sudoku Game",
   discipline: "Frontend",
   track: "Engineering Projects",
+  timeline: "Jan 2026 - Mar 2026",
 
   shortDescription:
     "An interactive Sudoku game powered by algorithm-driven puzzle generation and real-time validation.",
@@ -277,6 +281,7 @@ export const projects = [
   title: "Joystick Journal",
   discipline: "Fullstack",
   track: "Engineering Projects",
+  timeline: "Sep 2024 - Jan 2025",
 
   shortDescription:
     "A full-stack game review platform that allows users to discover, rate, and share opinions on video games through an interactive and user-friendly interface.",
@@ -333,52 +338,11 @@ export const projects = [
   liveUrl: "",
 },
   {
-    slug: "atlas-commerce",
-    title: "Atlas Commerce",
-    discipline: "Frontend",
-    track: "Engineering Projects",
-    shortDescription:
-      "A premium storefront experience focused on fast browsing, strong hierarchy, and conversion-driven product detail design.",
-    detailDescription:
-      "Atlas Commerce is a frontend-heavy e-commerce build that emphasizes polish, performance, and a product-first browsing flow.",
-    tech: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Stripe API"],
-    gradient:
-      "linear-gradient(145deg, rgba(245,243,239,0.98), rgba(216,167,177,0.8) 48%, rgba(122,139,122,0.96))",
-    accent: "rgba(255,255,255,0.72)",
-    problem:
-      "Many storefronts overload users with dense merchandising and repetitive navigation patterns. Atlas Commerce strips the experience back to focused storytelling, faster discovery, and cleaner product comparison.",
-    features: [
-      "Editorial landing pages with product storytelling and conversion prompts.",
-      "Filterable product grid with accessible sorting and quick comparison.",
-      "Mobile-optimized product detail pages with sticky purchase actions.",
-      "Checkout flow designed to minimize distractions and reduce drop-off.",
-    ],
-    implementation: [
-      {
-        title: "React architecture",
-        body: "The storefront is composed from layout shells, merchandising sections, and product modules that can be rearranged without changing core logic.",
-      },
-      {
-        title: "API integration",
-        body: "Product, inventory, and checkout flows are separated into adapters so the interface can respond cleanly to loading states, out-of-stock cases, and purchase success paths.",
-      },
-      {
-        title: "State management",
-        body: "Cart data is persisted across sessions while filters, sort state, and quick views remain scoped to shopping surfaces for simpler reasoning.",
-      },
-      {
-        title: "Performance",
-        body: "Visual assets are lazy-loaded, long lists are progressively rendered, and motion stays restrained so the experience feels premium without becoming heavy.",
-      },
-    ],
-    githubUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
-  },
-  {
     slug: "chronosense-case-study",
     title: "ChronoSense",
     discipline: "UX/UI",
     track: "UX/Product Projects",
+    timeline: "FigBuild 2026 (Mar)",
     tag: ["Hackathon Project", "FigBuild 2026"],
     shortDescription:
       "A time-awareness app that helps users understand attention patterns and build more intentional workflows.",
@@ -448,88 +412,223 @@ export const projects = [
     liveUrl: "https://www.figma.com/",
   },
   {
-    slug: "civic-service-portal",
-    title: "Civic Service Portal",
-    discipline: "Fullstack",
-    track: "Engineering Projects",
-    shortDescription:
-      "A digital service platform that helps residents submit requests, track case updates, and understand response timelines.",
-    detailDescription:
-      "Civic Service Portal is a public-sector workflow tool designed to make service requests more transparent and easier to manage.",
-    tech: ["React", "Node.js", "MySQL", "REST API", "Accessibility"],
-    gradient:
-      "linear-gradient(145deg, rgba(245,243,239,0.96), rgba(122,139,122,0.94) 48%, rgba(46,46,46,0.92))",
-    accent: "rgba(216, 167, 177, 0.48)",
-    problem:
-      "Residents often submit requests into black-box systems and receive little clarity about status, ownership, or expected timelines. Civic Service Portal creates a transparent request flow with meaningful feedback at every stage.",
-    features: [
-      "Multi-step intake forms with progress save and resume support.",
-      "Status tracker with service-level expectations and notifications.",
-      "Admin dashboard for triage, routing, and workload visibility.",
-      "Accessibility-first patterns for forms, tables, and feedback states.",
-    ],
-    implementation: [
-      {
-        title: "React architecture",
-        body: "The interface is separated into resident and admin surfaces that share a common design language while serving very different task models.",
-      },
-      {
-        title: "API integration",
-        body: "Case submission, status updates, and notification delivery flow through clearly defined endpoints with validation at both the client and server layers.",
-      },
-      {
-        title: "State management",
-        body: "Long-form workflows use draft persistence and route-aware state so users do not lose progress when navigating between service steps.",
-      },
-      {
-        title: "Performance",
-        body: "Form sections are chunked into smaller steps, admin tables support targeted refreshes, and perceived responsiveness is reinforced with deliberate loading feedback.",
-      },
-    ],
-    githubUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
+  slug: "ready-recipe",
+  title: "ReadyRecipe",
+  discipline: "UX/UI",
+  track: "UX/Product Projects",
+  timeline: "Sep. 2024 - Jan. 2025",
+
+  shortDescription:
+    "A recipe-to-action web experience that helps users move from discovering meals to planning and selecting ingredients seamlessly.",
+
+  detailDescription:
+    "A UX-driven web prototype that connects recipe discovery with planning and ingredient selection in a unified flow.",
+
+  overviewStatement:
+    "ReadyRecipe explores how users can move from inspiration to action without friction. Instead of separating browsing, planning, and purchasing, the experience brings them into a single, continuous flow. The system helps users quickly evaluate recipes, understand requirements, and transition directly into ingredient selection, supporting more confident and efficient decision-making.",
+
+  tech: ["Figma", "User Research", "Wireframing", "Interaction Design", "Prototyping"],
+
+  gradient:
+    "linear-gradient(145deg, rgba(245,243,239,0.96), rgba(216,167,177,0.9) 48%, rgba(122,139,122,0.85))",
+
+  accent: "rgba(216, 167, 177, 0.35)",
+
+  problem:
+    "Users often discover recipes but struggle to translate them into actionable steps, needing to manually track ingredients, plan shopping, and switch between multiple tools. This fragmented process creates friction between inspiration and execution, making cooking less efficient and more cognitively demanding.",
+
+  features: [
+    "Integrated flow from recipe discovery to ingredient selection within a single interface.",
+    "Clear recipe breakdown with time, difficulty, and required ingredients for quick evaluation.",
+    "Ingredient grouping and simplified selection to reduce decision friction.",
+    "Clean, structured layout that supports scanning and fast comparison between recipes.",
+    "Minimal interaction patterns that prioritize clarity and reduce cognitive load.",
+  ],
+
+  implementation: [
+    {
+      title: "End-to-end experience design",
+      body: "Mapped the full journey from discovering a recipe to preparing ingredients, ensuring each step transitions smoothly without context switching.",
+    },
+    {
+      title: "Information architecture",
+      body: "Structured recipe data, ingredients, and actions into a clear hierarchy so users can quickly understand requirements and next steps.",
+    },
+    {
+      title: "Interaction design",
+      body: "Designed low-friction interactions for ingredient selection and workflow progression, minimizing unnecessary steps.",
+    },
+    {
+      title: "Product thinking",
+      body: "Focused on bridging the gap between inspiration and execution by integrating decision-making and action into a single experience.",
+    },
+  ],
+
+  actionButtons: [
+    {
+      label: "Prototype",
+      href: "https://www.figma.com/proto/rbPVxdxRR8rQU8L2hB6xKl/ReadyRecipe?node-id=1-2&p=f&t=VB95QKlvuJLFbPbJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+      variant: "primary",
+    },
+    {
+      label: "Live Demo",
+      href: "https://www.youtube.com/watch?v=yXUzOGBmuSI",
+      variant: "secondary",
+    },
+  ],
+
+  githubUrl: "",
+  liveUrl: "https://www.figma.com/",
+
+  reflectionLead:
+    "This project reinforced the importance of designing complete user journeys rather than isolated screens, focusing on how decisions and actions connect across the experience.",
+
+  reflectionSupporting:
+    "It also highlighted the value of reducing friction between inspiration and execution, ensuring users can move forward without unnecessary complexity. If I continued the project, I would explore deeper validation through usability testing and refine how recommendations adapt to different user contexts.",
+
+  reflectionTags: ["Product thinking", "UX strategy", "Interaction design"],
   },
   {
-    slug: "northstar-design-system",
-    title: "Northstar Design System",
+    slug: "unlmtd",
+    title: "UNLMTD",
     discipline: "UX/UI",
     track: "UX/Product Projects",
+    cardImage: unlmtdCover,
+    image: unlmedDetail,
+
     shortDescription:
-      "A reusable design system that aligns product, design, and engineering teams around one visual language and implementation workflow.",
+      "A fitness recovery app prototype that helps users understand when to push or rest through clear, data-driven guidance.",
+
     detailDescription:
-      "Northstar Design System documents interface patterns, interaction principles, and design-to-code conventions for faster, more consistent product delivery.",
-    tech: ["Figma", "Design Tokens", "Prototyping", "Accessibility", "Documentation"],
+      "A UX-driven mobile app prototype that translates complex fitness and recovery data into simple, actionable insights for training decisions.",
+
+    overviewStatement:
+      "UNLMTD explores how users can make better training decisions through clearer feedback on their physical condition. Instead of relying on fragmented data or intuition, the experience brings together recovery, hydration, sleep, and activity into a single, understandable system. The goal is not just to track metrics, but to help users interpret them and act with confidence in their daily training routines.",
+
+    tech: ["Figma", "User Research", "Wireframing", "Interaction Design", "Prototyping"],
+
     gradient:
-      "linear-gradient(145deg, rgba(255,255,255,0.96), rgba(216,167,177,0.82) 46%, rgba(245,243,239,0.98), rgba(122,139,122,0.76))",
-    accent: "rgba(46, 46, 46, 0.22)",
+      "linear-gradient(145deg, rgba(122,139,122,0.92), rgba(255,255,255,0.96) 50%, rgba(46,46,46,0.85))",
+
+    accent: "rgba(122, 139, 122, 0.35)",
+
     problem:
-      "Teams moving quickly often accumulate visual drift and inconsistent interactions, which slows delivery and weakens trust. Northstar establishes a shared system for consistency without sacrificing flexibility.",
+      "Fitness users often struggle to interpret their physical condition and decide whether to push or rest. While data from wearables exists, it is often fragmented and difficult to translate into clear actions, leading to overtraining, fatigue, or inconsistent progress.",
+
     features: [
-      "Foundational tokens for color, spacing, type, elevation, and interaction.",
-      "Documented component patterns with states, rationale, and usage rules.",
-      "Design-to-code mapping that reduces handoff ambiguity for engineers.",
-      "Accessibility guidance embedded directly into component specs.",
+      "Wellness score that summarizes recovery, hydration, sleep, and training readiness.",
+      "AI-inspired recovery suggestions such as rest, light activity, or targeted recovery actions.",
+      "Adaptive workout recommendations based on current recovery status.",
+      "Structured dashboard that allows users to quickly understand their condition at a glance.",
+      "Progress tracking with simple insights that connect behavior to performance over time.",
     ],
+
     implementation: [
       {
-        title: "System architecture",
-        body: "The system starts with tokens and semantic layers, then builds up components and page patterns so decisions stay traceable from brand to implementation.",
+        title: "End-to-end experience design",
+        body: "Designed the full user journey from onboarding to daily decision-making, ensuring users can quickly understand and act on their condition.",
       },
       {
-        title: "Design operations",
-        body: "Figma libraries, naming conventions, and documentation templates were aligned to support collaboration instead of creating another disconnected asset set.",
+        title: "Information architecture",
+        body: "Simplified complex fitness data into key categories such as recovery, hydration, and training readiness for fast interpretation.",
       },
       {
-        title: "Collaboration model",
-        body: "Component definitions were written to clarify developer expectations for spacing, states, responsiveness, and interaction timing.",
+        title: "Interaction design",
+        body: "Created clear, low-friction interactions that guide users toward decisions without overwhelming them with data.",
       },
       {
-        title: "Scalability",
-        body: "Patterns were designed to support both marketing and product surfaces, which kept the system broad enough to be useful but focused enough to stay maintainable.",
+        title: "UX simplification",
+        body: "Focused on translating complex data into actionable insights rather than exposing raw metrics.",
       },
     ],
-    githubUrl: "https://github.com/",
+
+    actionButtons: [
+      {
+        label: "Prototype",
+        href: "https://www.figma.com/proto/ACsnCxm5Q88YNWgQsbyD6E/UNLMTD_FINAL?node-id=107-249&t=ddcWxLPueAfk4iFg-1&scaling=min-zoom&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=107%3A249&show-proto-sidebar=1",
+        variant: "primary",
+      },
+    ],
+
+    githubUrl: "",
     liveUrl: "https://www.figma.com/",
+
+    reflectionLead:
+      "This project reinforced the importance of helping users interpret data rather than simply presenting it.",
+
+    reflectionSupporting:
+      "It also highlighted how simplifying complex information into clear, actionable guidance can significantly improve decision-making. If I continued the project, I would validate how users respond to different types of feedback and refine how recommendations adapt over time.",
+
+    reflectionTags: ["Product thinking", "Data-driven UX", "Interaction design"],
+  },
+  {
+    slug: "us-police-visualization",
+    title: "U.S. Police Data Exploration Platform",
+    discipline: "Fullstack",
+    track: "Data Visualization",
+    timeline: "Sep 2023 - Dec 2023",
+
+    shortDescription:
+      "An interactive data platform that enables users to explore patterns in U.S. police shooting data through dynamic visualizations and filtering.",
+
+    detailDescription:
+      "A fullstack web application that transforms raw CSV data into an interactive dashboard with dynamic charts, filtering, and user interaction.",
+
+    overviewStatement:
+      "This project explores how data visualization and web technologies can support deeper understanding of complex societal datasets. By building a full data pipeline—from CSV ingestion to MySQL storage and frontend visualization—the system enables users to explore trends, compare variables, and interact with data in real time.",
+
+    tech: ["JavaScript", "Node.js", "MySQL", "Plotly", "HTML", "CSS"],
+
+    gradient:
+      "linear-gradient(145deg, rgba(46,46,46,0.92), rgba(255,255,255,0.96) 50%, rgba(122,139,122,0.85))",
+
+    accent: "rgba(46, 46, 46, 0.35)",
+
+    problem:
+      "Raw datasets are difficult to interpret without interactive tools. Static charts limit exploration and make it hard for users to identify patterns or relationships across multiple variables.",
+
+    features: [
+      "Dynamic chart generation (bar, line, pie) based on user-selected parameters.",
+      "Interactive filtering system that allows users to explore different data attributes.",
+      "Full data pipeline from CSV ingestion to MySQL database and frontend rendering.",
+      "Multi-page web application including login, registration, and data exploration views.",
+      "Dashboard-style interface that organizes data insights into a structured layout.",
+    ],
+
+    implementation: [
+      {
+        title: "Data pipeline",
+        body: "Imported raw CSV data into MySQL and structured it for efficient querying and visualization.",
+      },
+      {
+        title: "Backend integration",
+        body: "Used Node.js (server.js) to connect the database and deliver data dynamically to the frontend.",
+      },
+      {
+        title: "Interactive visualization",
+        body: "Implemented dynamic charts using Plotly, enabling users to switch between visualization types and parameters.",
+      },
+      {
+        title: "Frontend system",
+        body: "Developed a multi-page interface including login, registration, and dashboard views to support user interaction.",
+      },
+    ],
+
+    actionButtons: [
+      {
+        label: "GitHub",
+        href: "YOUR_GITHUB_LINK",
+        variant: "primary",
+      },
+    ],
+
+    reflectionLead:
+      "This project strengthened my understanding of how data flows through a fullstack system, from raw input to interactive visualization.",
+
+    reflectionSupporting:
+      "It also highlighted the importance of designing for exploration, where users can interact with data rather than passively consume it. If I continued the project, I would improve the UI clarity and introduce more advanced filtering and storytelling features.",
+
+    reflectionTags: ["Fullstack", "Data visualization", "System design"],
   },
 ];
 

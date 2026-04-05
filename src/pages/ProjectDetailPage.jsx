@@ -170,6 +170,8 @@ export default function ProjectDetailPage() {
                   subtitle={project.discipline}
                   gradient={project.gradient}
                   accent={project.accent}
+                  image={project.image}
+                  className="aspect-[387/199] min-h-0"
                 />
               </div>
             </div>

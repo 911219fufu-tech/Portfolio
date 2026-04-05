@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ProjectVisual from "./ProjectVisual";
 
 export default function ProjectCard({ project }) {
+  const cardMeta = project.timeline ?? project.cardMeta ?? "Case Study";
+
   return (
     <motion.div
       layout
@@ -24,6 +26,7 @@ export default function ProjectCard({ project }) {
               subtitle={project.track}
               gradient={project.gradient}
               accent={project.accent}
+              image={project.cardImage ?? project.image}
             />
           </div>
         </div>
@@ -34,7 +37,7 @@ export default function ProjectCard({ project }) {
               {project.discipline}
             </p>
             <span className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600">
-              View Case Study
+              {cardMeta}
             </span>
           </div>
 
