@@ -143,8 +143,8 @@ export default function AboutSection() {
           <span>2 Degrees</span>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="section-card p-8 sm:p-10">
+        <div className="mt-12 grid items-start gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="section-card self-start p-8 sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-moss">
               Professional
             </p>
@@ -177,7 +177,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="section-card p-8 sm:p-10">
+          <div className="section-card self-start p-8 sm:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-moss">
               Beyond Coding
             </p>
