@@ -70,10 +70,18 @@ export default function ProjectDetailPage() {
   const reflectionSegments = reflectionText.split(/(?<=\.)\s+/);
   const reflectionLead =
     project.reflectionLead ??
+    project.reflectionTitle ??
     reflectionSegments[0] ??
     "This project sharpened how I think about product decisions, clarity, and execution.";
   const reflectionSupporting =
-    project.reflectionSupporting ?? reflectionSegments.slice(1).join(" ");
+    project.reflectionSupporting ??
+    project.reflectionBody ??
+    reflectionSegments.slice(1).join(" ");
+  const reflectionTags = project.reflectionTags ?? [
+    "Product thinking",
+    "Design clarity",
+    "Iteration",
+  ];
 
   return (
     <main className="pb-24 pt-12">
@@ -234,15 +242,14 @@ export default function ProjectDetailPage() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <span className="rounded-full bg-stone-100 px-3.5 py-1.5 text-xs font-medium text-stone-600">
-                  Product thinking
-                </span>
-                <span className="rounded-full bg-stone-100 px-3.5 py-1.5 text-xs font-medium text-stone-600">
-                  Design clarity
-                </span>
-                <span className="rounded-full bg-stone-100 px-3.5 py-1.5 text-xs font-medium text-stone-600">
-                  Iteration
-                </span>
+                {reflectionTags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-stone-100 px-3.5 py-1.5 text-xs font-medium text-stone-600"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           </section>

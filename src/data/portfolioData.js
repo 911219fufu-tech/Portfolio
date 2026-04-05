@@ -213,47 +213,65 @@ export const beyondCodingTabs = [
 
 export const projects = [
   {
-    slug: "harbor-finance",
-    title: "Harbor Finance",
-    discipline: "Frontend",
-    track: "Engineering Projects",
-    shortDescription:
-      "A responsive analytics workspace for finance teams to monitor revenue, cash flow, and forecast confidence in one view.",
-    detailDescription:
-      "Harbor Finance turns fragmented reporting into a focused dashboard experience built for decision-making, not spreadsheet wrangling.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "REST API"],
-    gradient:
-      "linear-gradient(145deg, rgba(46,46,46,0.96), rgba(122,139,122,0.92) 46%, rgba(245,243,239,0.95))",
-    accent: "rgba(216, 167, 177, 0.72)",
-    problem:
-      "Finance operations teams often toggle across disconnected dashboards, CSV exports, and custom spreadsheets just to answer basic performance questions. Harbor Finance consolidates those workflows into a fast, structured interface designed for quick scanning and confident reporting.",
-    features: [
-      "Modular KPI dashboard with drill-down panels for revenue, burn, and runway.",
-      "Scenario comparison views for forecast confidence and plan variance.",
-      "Saved filters and responsive tables that stay usable on smaller screens.",
-      "Accessible data visualizations with clear hover and focus states.",
-    ],
-    implementation: [
-      {
-        title: "React architecture",
-        body: "The app is split into route-level shells, feature modules, and shared visualization primitives so dashboard views can evolve without duplicating layout or state logic.",
-      },
-      {
-        title: "API integration",
-        body: "A thin service layer normalizes portfolio and reporting endpoints, keeping request, loading, and error behavior consistent across charts, tables, and summary cards.",
-      },
-      {
-        title: "State management",
-        body: "UI state is localized per feature while shared filters live in a synchronized context, which keeps interactions predictable without introducing unnecessary global complexity.",
-      },
-      {
-        title: "Performance",
-        body: "Heavy panels render incrementally, chart payloads are memoized at the adapter boundary, and visual transitions are tuned to feel smooth without blocking interaction.",
-      },
-    ],
-    githubUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
-  },
+  slug: "sudoku-game",
+  title: "Sudoku Game",
+  discipline: "Frontend",
+  track: "Engineering Projects",
+
+  shortDescription:
+    "An interactive Sudoku game powered by algorithm-driven puzzle generation and real-time validation.",
+
+  detailDescription:
+    "Solve Sudoku with real-time feedback and algorithm-generated puzzles.",
+
+  overviewStatement:
+    "This project focuses on building a responsive puzzle experience by combining algorithmic logic with interactive frontend development. It enables users to play dynamically generated Sudoku boards while receiving immediate validation and feedback during gameplay.",
+
+  tech: ["JavaScript", "HTML", "CSS", "Algorithm Design"],
+
+  gradient:
+    "linear-gradient(145deg, rgba(46,46,46,0.96), rgba(122,139,122,0.92) 46%, rgba(245,243,239,0.95))",
+
+  accent: "rgba(216, 167, 177, 0.72)",
+
+  problem:
+    "Many Sudoku implementations are either static or lack responsive interaction, providing limited feedback and engagement. There is a need for a puzzle experience that combines correct board generation, real-time validation, and smooth interaction to support both usability and logical accuracy.",
+
+  features: [
+    "Dynamic Sudoku board generation using a backtracking algorithm.",
+    "Real-time validation of user input across rows, columns, and grids.",
+    "Interactive UI with immediate visual feedback for correct and incorrect entries.",
+    "Multiple difficulty levels with consistent puzzle validity.",
+    "Timer and game state tracking to enhance user engagement.",
+  ],
+
+  implementation: [
+    {
+      title: "Algorithm design",
+      body: "Implemented a backtracking algorithm to generate valid Sudoku boards, ensuring each puzzle satisfies all constraints while supporting different difficulty levels.",
+    },
+    {
+      title: "Game logic",
+      body: "Built validation logic that continuously checks user input against Sudoku rules, enabling real-time feedback without disrupting interaction flow.",
+    },
+    {
+      title: "Frontend interaction",
+      body: "Developed an interactive interface using HTML, CSS, and JavaScript, focusing on responsive input handling and clear visual feedback.",
+    },
+    {
+      title: "State management",
+      body: "Managed game state including board configuration, timer, and user progress to maintain a smooth and consistent gameplay experience.",
+    },
+  ],
+  reflectionTitle:
+    "This project reinforced the importance of translating algorithmic logic into clear and responsive user interactions, ensuring that complex constraint-solving remains intuitive for users.",
+  reflectionBody:
+    "It highlighted how frontend experience and underlying logic must work together—real-time validation, state management, and feedback design all play a role in making the system feel seamless. If I continued the project, I would refine difficulty balancing, optimize performance for faster puzzle generation, and explore more advanced interaction patterns to enhance user engagement.",
+  reflectionTags: ["Algorithmic thinking", "Frontend engineering", "Problem solving"],
+
+  githubUrl: "https://github.com/911219fufu-tech/Sudoku-Game",
+  liveUrl: "https://sudoku-game-indol-ten.vercel.app/",
+},
   {
   slug: "joystick-journal",
   title: "Joystick Journal",
@@ -305,6 +323,11 @@ export const projects = [
       body: "Developed backend services using Node.js and Express, implementing authentication, data storage, and database operations with MySQL.",
     },
   ],
+  reflectionTitle:
+    "This project reinforced the importance of designing systems that balance user experience with scalable architecture, ensuring that interaction flows remain intuitive while the underlying logic stays maintainable.",
+  reflectionBody:
+    "It also highlighted how frontend and backend decisions are deeply connected—choices in data structure, API design, and state handling directly shape the usability and responsiveness of the product. If I continued the project, I would focus on improving data modeling, expanding features like personalization, and refining performance for larger-scale user interactions.",
+  reflectionTags: ["Fullstack thinking", "System design", "Product thinking"],
 
   githubUrl: "https://github.com/911219fufu-tech/Game-Review-Platform",
   liveUrl: "",
@@ -416,6 +439,11 @@ export const projects = [
         variant: "secondary",
       },
     ],
+    reflectionLead:
+      "This project reinforced the importance of making abstract concepts tangible, translating invisible states like attention and time perception into clear, intuitive experiences.",
+    reflectionSupporting:
+      "It also emphasized designing for awareness rather than control—creating systems that support users gently without interrupting their natural flow. If I continued the project, I would explore more data-driven validation and refine how feedback adapts to individual behavior patterns over time.",
+    reflectionTags: ["Product thinking", "Interaction design", "System design"],
     githubUrl: "",
     liveUrl: "https://www.figma.com/",
   },
