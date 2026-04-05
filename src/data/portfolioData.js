@@ -64,6 +64,153 @@ export const galleryItems = [
   },
 ];
 
+export const beyondCodingTabs = [
+  {
+    id: "photography",
+    label: "Photography",
+    intro:
+      "Photography helps me notice composition, contrast, and timing. It is one of the ways I practice visual clarity outside of product work.",
+    items: [
+      {
+        title: "New Orleans",
+        caption: "Architecture and warm light",
+        gradient:
+          "linear-gradient(145deg, rgba(248,240,228,0.98), rgba(216,167,177,0.72) 52%, rgba(255,255,255,0.96))",
+      },
+      {
+        title: "Golden Hour",
+        caption: "Soft shadows and calm pacing",
+        gradient:
+          "linear-gradient(145deg, rgba(255,255,255,0.96), rgba(244,224,198,0.86) 45%, rgba(122,139,122,0.34))",
+      },
+      {
+        title: "Street Rhythm",
+        caption: "Patterns hidden in everyday scenes",
+        gradient:
+          "linear-gradient(135deg, rgba(245,243,239,0.98), rgba(199,215,203,0.82) 50%, rgba(122,139,122,0.95))",
+      },
+      {
+        title: "Quiet Corners",
+        caption: "Framing stillness with intention",
+        gradient:
+          "linear-gradient(145deg, rgba(233,223,217,0.92), rgba(255,255,255,0.96) 52%, rgba(216,167,177,0.72))",
+      },
+      {
+        title: "Window Light",
+        caption: "Observing texture and atmosphere",
+        gradient:
+          "linear-gradient(135deg, rgba(247,244,239,0.96), rgba(225,214,203,0.82) 50%, rgba(122,139,122,0.28))",
+      },
+      {
+        title: "Evening Walks",
+        caption: "Small moments that feel cinematic",
+        gradient:
+          "linear-gradient(145deg, rgba(46,46,46,0.88), rgba(122,139,122,0.72) 46%, rgba(245,243,239,0.8))",
+      },
+    ],
+  },
+  {
+    id: "travel",
+    label: "Travel",
+    intro:
+      "Travel changes how I read environments. New places sharpen my sense of atmosphere, rhythm, and what makes an experience feel memorable.",
+    items: [
+      {
+        title: "New Orleans",
+        note: "Architecture, texture, and light all shape how a place tells its story.",
+        gradient:
+          "linear-gradient(145deg, rgba(248,235,220,0.96), rgba(216,167,177,0.72) 48%, rgba(255,255,255,0.96))",
+      },
+      {
+        title: "California",
+        note: "Openness and calmness remind me that simple layouts often feel strongest.",
+        gradient:
+          "linear-gradient(145deg, rgba(255,255,255,0.98), rgba(199,215,203,0.86) 52%, rgba(122,139,122,0.94))",
+      },
+      {
+        title: "Taipei",
+        note: "Density, pace, and signage offer lessons in information hierarchy.",
+        gradient:
+          "linear-gradient(145deg, rgba(233,223,217,0.92), rgba(245,243,239,0.98) 45%, rgba(46,46,46,0.24))",
+      },
+      {
+        title: "Weekend Getaways",
+        note: "Short trips reset perspective and help me notice what feels intuitive in unfamiliar contexts.",
+        gradient:
+          "linear-gradient(145deg, rgba(247,244,239,0.96), rgba(216,167,177,0.58) 44%, rgba(122,139,122,0.34))",
+      },
+    ],
+  },
+  {
+    id: "daily-moments",
+    label: "Daily Moments",
+    intro:
+      "Small routines shape how I think. The quiet parts of the day often influence how I approach clarity, pacing, and attention to detail.",
+    items: [
+      {
+        title: "Baking",
+        reflection:
+          "Baking helps me slow down and focus on details, a mindset I also bring into design.",
+        gradient:
+          "linear-gradient(145deg, rgba(248,235,220,0.96), rgba(255,255,255,0.98) 50%, rgba(216,167,177,0.68))",
+      },
+      {
+        title: "Coffee",
+        reflection:
+          "Coffee and quiet pauses give me space to reset and think more deliberately.",
+        gradient:
+          "linear-gradient(145deg, rgba(245,243,239,0.96), rgba(225,214,203,0.86) 52%, rgba(122,139,122,0.26))",
+      },
+      {
+        title: "Daily Routines",
+        reflection:
+          "Simple routines shape how I think about consistency, structure, and calm interfaces.",
+        gradient:
+          "linear-gradient(145deg, rgba(255,255,255,0.98), rgba(199,215,203,0.76) 48%, rgba(122,139,122,0.92))",
+      },
+      {
+        title: "Quiet Moments",
+        reflection:
+          "Stillness helps me notice what is essential and remove what is not.",
+        gradient:
+          "linear-gradient(145deg, rgba(233,223,217,0.9), rgba(255,255,255,0.98) 52%, rgba(216,167,177,0.68))",
+      },
+    ],
+  },
+  {
+    id: "design-inspiration",
+    label: "Design Inspiration",
+    intro:
+      "I draw design inspiration from atmosphere, composition, and how subtle details shape emotion and usability.",
+    items: [
+      {
+        title: "Golden Hour",
+        note: "Light and restraint",
+      },
+      {
+        title: "Typography",
+        note: "Tone through spacing and weight",
+      },
+      {
+        title: "Micro Interactions",
+        note: "Small feedback, clear intent",
+      },
+      {
+        title: "Color & Mood",
+        note: "Warm systems that stay calm",
+      },
+      {
+        title: "Minimal Interfaces",
+        note: "Less noise, stronger hierarchy",
+      },
+      {
+        title: "Street Details",
+        note: "Useful patterns hidden in plain sight",
+      },
+    ],
+  },
+];
+
 export const projects = [
   {
     slug: "harbor-finance",

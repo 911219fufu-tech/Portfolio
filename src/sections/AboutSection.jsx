@@ -1,8 +1,131 @@
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import AnimatedSection from "../components/AnimatedSection";
 import SectionHeader from "../components/SectionHeader";
-import { galleryItems } from "../data/portfolioData";
+import { beyondCodingTabs } from "../data/portfolioData";
+
+function PhotographyPanel({ items }) {
+  return (
+    <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+      {items.slice(0, 3).map((item) => (
+        <div
+          key={item.title}
+          className="group overflow-hidden rounded-[1.4rem] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
+        >
+          <div
+            className="relative aspect-[0.9] overflow-hidden rounded-[1.4rem] p-3 transition duration-300 group-hover:scale-[1.03]"
+            style={{ backgroundImage: item.gradient }}
+          >
+            <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/78 p-3 backdrop-blur-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-charcoal">
+                {item.title}
+              </p>
+              <p className="mt-1 text-xs text-stone-600">{item.caption}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function TravelPanel({ items }) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2">
+      {items.slice(0, 2).map((item) => (
+        <div
+          key={item.title}
+          className="rounded-[1.5rem] bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
+        >
+          <div
+            className="aspect-[1.25] rounded-[1.2rem]"
+            style={{ backgroundImage: item.gradient }}
+          />
+          <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-moss">
+            {item.title}
+          </p>
+          <p className="mt-2 text-sm leading-7 text-stone-600">{item.note}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function DailyMomentsPanel({ items }) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2">
+      {items.slice(0, 2).map((item) => (
+        <div
+          key={item.title}
+          className="rounded-[1.5rem] bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
+        >
+          <div
+            className="aspect-[1.12] rounded-[1.2rem]"
+            style={{ backgroundImage: item.gradient }}
+          />
+          <p className="mt-4 text-base font-semibold text-charcoal">
+            {item.title}
+          </p>
+          <p className="mt-2 text-sm leading-7 text-stone-600">
+            {item.reflection}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function InspirationPanel({ items }) {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {items.map((item, index) => (
+        <div
+          key={item.title}
+          className="group rounded-[1.4rem] bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
+        >
+          <div className="flex items-center gap-3">
+            <span
+              className="h-2.5 w-2.5 rounded-full"
+              style={{
+                background:
+                  index % 2 === 0 ? "rgba(122,139,122,0.95)" : "rgba(216,167,177,0.95)",
+              }}
+            />
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-charcoal">
+              {item.title}
+            </p>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-stone-600">{item.note}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function AboutSection() {
+  const [activeTab, setActiveTab] = useState("photography");
+  const activeContent = beyondCodingTabs.find((tab) => tab.id === activeTab);
+
+  const renderTabContent = () => {
+    if (!activeContent) {
+      return null;
+    }
+
+    if (activeContent.id === "photography") {
+      return <PhotographyPanel items={activeContent.items} />;
+    }
+
+    if (activeContent.id === "travel") {
+      return <TravelPanel items={activeContent.items} />;
+    }
+
+    if (activeContent.id === "daily-moments") {
+      return <DailyMomentsPanel items={activeContent.items} />;
+    }
+
+    return <InspirationPanel items={activeContent.items} />;
+  };
+
   return (
     <AnimatedSection id="about">
       <div className="section-shell">
@@ -59,41 +182,43 @@ export default function AboutSection() {
               Beyond Coding
             </p>
             <p className="mt-6 text-base leading-8 text-stone-600">
-              Outside of building web applications, I enjoy exploring new
-              places, capturing everyday moments, and staying active. These
-              experiences influence how I approach design, focusing on clarity,
-              simplicity, and human-centered thinking.
+              Outside of building products, I pay attention to moments, places,
+              and visual details that shape how I think about clarity,
+              atmosphere, and human-centered design.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              {[
-                "Photography",
-                "Travel",
-                "Running",
-                "Design Inspiration",
-              ].map((item) => (
-                <span key={item} className="tag-pill">
-                  {item}
-                </span>
+            <div className="mt-8 flex flex-wrap gap-2.5">
+              {beyondCodingTabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                    activeTab === tab.id
+                      ? "bg-charcoal text-white"
+                      : "bg-white/60 text-gray-500 hover:bg-white"
+                  }`}
+                >
+                  {tab.label}
+                </button>
               ))}
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {galleryItems.map((item) => (
-                <div key={item.title} className="overflow-hidden rounded-[1.35rem]">
-                  <div
-                    className="relative aspect-[0.82] rounded-[1.35rem] border border-white/60 p-3 shadow-sm"
-                    style={{ backgroundImage: item.gradient }}
-                  >
-                    <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/70 p-3 backdrop-blur-lg">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-charcoal">
-                        {item.title}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 6 }}
+                transition={{ duration: 0.28, ease: "easeOut" }}
+                className="mt-6"
+              >
+                <p className="mb-5 max-w-2xl text-sm leading-7 text-stone-600">
+                  {activeContent?.intro}
+                </p>
+                {renderTabContent()}
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>
