@@ -255,47 +255,60 @@ export const projects = [
     liveUrl: "https://example.com/",
   },
   {
-    slug: "pulse-workspace",
-    title: "Pulse Workspace",
-    discipline: "Fullstack",
-    track: "Engineering Projects",
-    shortDescription:
-      "A collaborative task and documentation platform for small product teams that need planning, communication, and delivery in one place.",
-    detailDescription:
-      "Pulse Workspace combines kanban planning, lightweight documentation, and workflow automation into a calm product operations hub.",
-    tech: ["React", "Node.js", "MySQL", "Tailwind CSS", "JWT Auth"],
-    gradient:
-      "linear-gradient(145deg, rgba(122,139,122,0.96), rgba(245,243,239,0.9) 58%, rgba(216,167,177,0.82))",
-    accent: "rgba(46, 46, 46, 0.2)",
-    problem:
-      "Growing teams often piece together tasks, specs, and decision logs across separate tools, which leads to lost context and duplicated status updates. Pulse Workspace centralizes those rituals into one interface designed for clarity, ownership, and momentum.",
-    features: [
-      "Shared boards with deadlines, assignees, and status grouping.",
-      "Rich documentation pages connected directly to tickets and milestones.",
-      "Role-based access for contributors, reviewers, and admins.",
-      "Real-time activity feed that surfaces changes without overwhelming the user.",
-    ],
-    implementation: [
-      {
-        title: "React architecture",
-        body: "The frontend uses route-based layouts, reusable card and panel components, and feature folders for boards, docs, and settings to keep the surface area maintainable.",
-      },
-      {
-        title: "API integration",
-        body: "REST endpoints for boards, comments, and workspace settings are wrapped with consistent request helpers that handle auth, optimistic updates, and failure recovery.",
-      },
-      {
-        title: "State management",
-        body: "Server-backed entities are refreshed per route, while interaction-heavy state such as filters, drawers, and modals stays close to the components that own it.",
-      },
-      {
-        title: "Performance",
-        body: "Pagination, incremental rendering, and targeted data refreshes keep the interface responsive even when boards and activity feeds grow larger.",
-      },
-    ],
-    githubUrl: "https://github.com/",
-    liveUrl: "https://example.com/",
-  },
+  slug: "joystick-journal",
+  title: "Joystick Journal",
+  discipline: "Fullstack",
+  track: "Engineering Projects",
+
+  shortDescription:
+    "A full-stack game review platform that allows users to discover, rate, and share opinions on video games through an interactive and user-friendly interface.",
+
+  detailDescription:
+    "A full-stack platform for discovering, reviewing, and sharing video games.",
+
+  overviewStatement:
+    "Joystick Journal is an end-to-end product that combines user-centered design with full-stack development, enabling seamless browsing, reviewing, and real-time interaction with game content.",
+
+  tech: ["React", "Node.js", "MySQL", "Tailwind CSS", "REST API"],
+
+  gradient:
+    "linear-gradient(145deg, rgba(122,139,122,0.96), rgba(245,243,239,0.9) 58%, rgba(216,167,177,0.82))",
+
+  accent: "rgba(46, 46, 46, 0.2)",
+
+  problem:
+    "Many game review platforms are cluttered, difficult to navigate, or lack meaningful interaction, making it hard for users to quickly discover relevant content or share their opinions. There is a need for a platform that balances usability, clarity, and real-time interaction while supporting scalable user-generated content.",
+
+  features: [
+    "Interactive rating and review system with real-time feedback.",
+    "Search and browse functionality for discovering games efficiently.",
+    "User authentication system for personalized experiences.",
+    "Responsive and clean UI designed for clarity and ease of use.",
+    "Dynamic content updates without page reloads.",
+  ],
+
+  implementation: [
+    {
+      title: "UX / UI design",
+      body: "Designed intuitive user flows for browsing, reviewing, and rating games, with a focus on visual hierarchy and clear interaction patterns to enhance usability.",
+    },
+    {
+      title: "Frontend architecture",
+      body: "Built a single-page application using React and React Router, enabling dynamic navigation and seamless user interactions across different views.",
+    },
+    {
+      title: "API & data integration",
+      body: "Integrated RESTful APIs to handle game data, user interactions, and reviews, ensuring consistent communication between frontend and backend.",
+    },
+    {
+      title: "Backend system",
+      body: "Developed backend services using Node.js and Express, implementing authentication, data storage, and database operations with MySQL.",
+    },
+  ],
+
+  githubUrl: "https://github.com/911219fufu-tech/Game-Review-Platform",
+  liveUrl: "",
+},
   {
     slug: "atlas-commerce",
     title: "Atlas Commerce",
@@ -339,45 +352,71 @@ export const projects = [
     liveUrl: "https://example.com/",
   },
   {
-    slug: "caremap-case-study",
-    title: "CareMap",
+    slug: "chronosense-case-study",
+    title: "ChronoSense",
     discipline: "UX/UI",
     track: "UX/Product Projects",
+    tag: ["Hackathon Project", "FigBuild 2026"],
     shortDescription:
-      "A healthcare scheduling case study that reduces friction for patients coordinating appointments, reminders, and follow-up tasks.",
+      "A time-awareness app that helps users understand attention patterns and build more intentional workflows.",
     detailDescription:
-      "CareMap reframes care coordination as a calmer end-to-end journey, with clear priorities, low-cognitive-load flows, and accessible information design.",
+      "A time-awareness app that reveals attention patterns and supports more intentional workflows.",
+    overviewStatement:
+      "Built during FigBuild 2026, ChronoSense explores how technology can make subjective time visible by translating attention patterns into real-time feedback. The system helps users recognize focus, distraction, and mental fatigue to support more intentional decision-making.",
     tech: ["Figma", "User Research", "Wireframing", "Design Systems", "Prototyping"],
     gradient:
       "linear-gradient(145deg, rgba(216,167,177,0.92), rgba(255,255,255,0.96) 50%, rgba(122,139,122,0.85))",
     accent: "rgba(122, 139, 122, 0.35)",
     problem:
-      "Patients managing multiple visits and follow-ups often face fragmented instructions, unclear timelines, and stressful communication. CareMap redesigns that experience to reduce uncertainty and make next steps obvious.",
+      "People often lose track of time without understanding why—whether through distraction, lack of focus, or mental fatigue. Most tools focus on scheduling and productivity, but fail to address how time is actually experienced, creating a gap between measured time and perceived time.",
     features: [
-      "End-to-end patient journey mapping from booking through follow-up.",
-      "Clear appointment cards with priorities, reminders, and prep notes.",
-      "Low-friction mobile interactions for rescheduling and document upload.",
-      "Accessible UI system optimized for readability and trust.",
+      "Real-time visualization of attention states such as focus, distraction, and mental fatigue.",
+      "Time perception feedback that helps users understand how time feels in different contexts.",
+      "Subtle interventions (music, prompts) to guide users back when attention drifts.",
+      "Minimal, non-intrusive interface designed to reduce cognitive load.",
+      "Adaptive system that reflects individual time perception patterns.",
     ],
     implementation: [
       {
-        title: "Design architecture",
-        body: "The case study was organized around task flows, shared components, and a scalable visual system so each screen reinforced the same information hierarchy.",
+        title: "Experience design",
+        body: "The app was designed to make subjective time visible, translating abstract attention states into intuitive visual feedback.",
       },
       {
-        title: "Research synthesis",
-        body: "Interview findings and usability observations were translated into concise design principles that guided structure, copy tone, and interaction behavior.",
+        title: "Information mapping",
+        body: "Complex signals such as focus and distraction were simplified into clear visual patterns for quick interpretation.",
       },
       {
-        title: "System thinking",
-        body: "Reusable patterns for cards, alerts, and timelines ensured consistency across patient, caregiver, and administrative touchpoints.",
+        title: "Interaction design",
+        body: "Interactions were lightweight and non-intrusive, ensuring the system supports awareness without becoming a distraction.",
       },
       {
-        title: "Validation",
-        body: "Prototype iterations focused on simplifying terminology, tightening decision points, and reducing the number of steps required to complete common actions.",
+        title: "Rapid prototyping",
+        body: "Developed through fast iterations using Figma Make, enabling quick exploration and refinement of core ideas.",
       },
     ],
-    githubUrl: "https://github.com/",
+    actionButtons: [
+      {
+        label: "Prototype",
+        href: "https://lunar-export-20547076.figma.site/",
+        variant: "primary",
+      },
+      {
+        label: "Live Demo",
+        href: "https://www.youtube.com/watch?v=Rw9mmFBeTOY",
+        variant: "secondary",
+      },
+      {
+        label: "Presentation",
+        href: "https://www.figma.com/deck/P7MK7sO1Xe8cqZ4EfJuHhY/ChronoScense?node-id=1-393&t=lRuccJo3JMUgpTgy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+        variant: "secondary",
+      },
+      {
+        label: "Devpost",
+        href: "https://devpost.com/software/chronosense",
+        variant: "secondary",
+      },
+    ],
+    githubUrl: "",
     liveUrl: "https://www.figma.com/",
   },
   {

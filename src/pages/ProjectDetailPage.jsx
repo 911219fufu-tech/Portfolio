@@ -44,6 +44,24 @@ export default function ProjectDetailPage() {
   const detailTitle = project.detailTitle ?? project.title;
   const tools = project.tools ?? project.tech ?? [];
   const contextBadges = project.contextBadges ?? [];
+  const actionButtons =
+    project.actionButtons ??
+    [
+      project.githubUrl
+        ? {
+            label: "GitHub",
+            href: project.githubUrl,
+            variant: "primary",
+          }
+        : null,
+      project.liveUrl
+        ? {
+            label: "Live Demo",
+            href: project.liveUrl,
+            variant: "secondary",
+          }
+        : null,
+    ].filter(Boolean);
   const overviewStatement = project.overviewStatement ?? project.detailDescription;
   const overviewSupporting = project.overviewSupporting ?? project.overview ?? project.problem;
   const reflectionText =
@@ -118,23 +136,22 @@ export default function ProjectDetailPage() {
                 ))}
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-white transition hover:bg-moss"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full border border-stone-200 bg-white px-6 py-3 text-sm font-medium text-stone-700 transition hover:border-moss hover:text-moss"
-                >
-                  Live Demo
-                </a>
+              <div className="mt-10 flex flex-wrap gap-3">
+                {actionButtons.map((button) => (
+                  <a
+                    key={`${button.label}-${button.href}`}
+                    href={button.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={
+                      button.variant === "primary"
+                        ? "inline-flex items-center justify-center rounded-full bg-charcoal px-5 py-3 text-sm font-medium text-white transition hover:bg-moss"
+                        : "inline-flex items-center justify-center rounded-full border border-stone-200 bg-white px-5 py-3 text-sm font-medium text-stone-700 transition hover:border-moss hover:text-moss"
+                    }
+                  >
+                    {button.label}
+                  </a>
+                ))}
               </div>
             </div>
 
