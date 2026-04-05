@@ -8,9 +8,17 @@ export default function AboutSection() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="About"
-          title="Design-minded engineering with product clarity."
-          description="I work at the intersection of interface design and frontend development, translating product ideas into experiences that feel intuitive, polished, and useful."
+          title="Design-minded engineering for clear, user-centered products."
+          description="I work at the intersection of interface design and frontend development, turning product ideas into intuitive, polished, and user-centered web experiences."
         />
+
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-stone-500 sm:gap-x-5">
+          <span>4+ Projects</span>
+          <span className="hidden text-stone-300 sm:inline">|</span>
+          <span>1 Leadership Role</span>
+          <span className="hidden text-stone-300 sm:inline">|</span>
+          <span>2 Degrees</span>
+        </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="section-card p-8 sm:p-10">
@@ -19,21 +27,30 @@ export default function AboutSection() {
             </p>
             <div className="mt-6 space-y-5 text-lg leading-8 text-stone-600">
               <p>
-                My work focuses on bridging design and engineering. I care about
-                how interfaces feel, how systems scale, and how product choices
-                shape the experience for the person using them.
+                My work sits at the intersection of design and engineering, where I focus on translating product ideas into intuitive, scalable web experiences.
+
               </p>
               <p>
-                On the engineering side, I build modern React interfaces with
-                strong structure, responsive behavior, and maintainable
-                components. On the design side, I think in flows, hierarchy, and
-                clarity so the final product feels intentional from first glance
-                to final interaction.
+                On the engineering side, I build modern React applications with clean architecture, responsive design, and maintainable component systems. On the design side, I think in user flows, hierarchy, and interaction details to ensure each interface feels intentional and cohesive.
+
               </p>
               <p>
-                That combination helps me build user-centered products that are
-                not only functional, but calm, consistent, and easier to trust.
+                I care deeply about creating products that are not only functional, but also clear, consistent, and easy to trust.
+
               </p>
+            </div>
+
+            <div className="mt-8 space-y-3 border-t border-stone-200/80 pt-6">
+              {[
+                "Built 4+ full-stack and frontend-focused web applications",
+                "Led a cross-functional team of 7 as a Scrum Master",
+                "Developed data-driven applications handling 8,000+ records",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm text-stone-600 sm:text-base">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-moss" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -47,6 +64,19 @@ export default function AboutSection() {
               experiences influence how I approach design, focusing on clarity,
               simplicity, and human-centered thinking.
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {[
+                "Photography",
+                "Travel",
+                "Running",
+                "Design Inspiration",
+              ].map((item) => (
+                <span key={item} className="tag-pill">
+                  {item}
+                </span>
+              ))}
+            </div>
 
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {galleryItems.map((item) => (
