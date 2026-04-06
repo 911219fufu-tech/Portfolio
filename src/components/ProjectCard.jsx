@@ -32,11 +32,11 @@ export default function ProjectCard({ project }) {
         </div>
 
         <div className="flex flex-1 flex-col px-1 pb-2 pt-6">
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-moss">
               {project.discipline}
             </p>
-            <span className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600">
+            <span className="inline-flex rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-600">
               {cardMeta}
             </span>
           </div>

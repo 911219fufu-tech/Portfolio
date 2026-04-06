@@ -9,6 +9,7 @@ export default function AnimatedSection({
   id,
   className = "",
   children,
+  revealOnScroll = true,
 }) {
   return (
     <motion.section
@@ -16,8 +17,9 @@ export default function AnimatedSection({
       data-section="true"
       className={`scroll-mt-24 pt-8 pb-16 ${className}`}
       initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.24 }}
+      animate={revealOnScroll ? undefined : { opacity: 1, y: 0 }}
+      whileInView={revealOnScroll ? { opacity: 1, y: 0 } : undefined}
+      viewport={revealOnScroll ? { once: true, amount: 0.24 } : undefined}
       transition={transition}
     >
       {children}

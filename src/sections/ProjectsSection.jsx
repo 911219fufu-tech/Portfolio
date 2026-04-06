@@ -16,7 +16,7 @@ export default function ProjectsSection() {
       : projects.filter((project) => project.discipline === activeFilter);
 
   return (
-    <AnimatedSection id="projects">
+    <AnimatedSection id="projects" revealOnScroll={false}>
       <div className="section-shell">
         <div className="section-card overflow-hidden p-8 sm:p-10 lg:p-12">
           <SectionHeader
