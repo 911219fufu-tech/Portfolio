@@ -8,6 +8,8 @@ import joystickJournalCover from "../assets/projects/joystickjournal-cover.png";
 import joystickJournalDetail from "../assets/projects/joystickjournal-detail.png";
 import chronosenseCover from "../assets/projects/chronosense-cover.png";
 import chronosenseDetail from "../assets/projects/chronosense-detail.png";
+import usPoliceCover from "../assets/projects/uspolice.png";
+import usPoliceDetail from "../assets/projects/uspolice-detail.png";
 
 export const navItems = [
   { path: "/", label: "Home" },
@@ -224,132 +226,6 @@ export const beyondCodingTabs = [
 
 export const projects = [
   {
-  slug: "sudoku-game",
-  title: "Sudoku Game",
-  discipline: "Frontend",
-  track: "Engineering Projects",
-  timeline: "Jan 2026 - Mar 2026",
-  cardImage: sudokuGameCover,
-  image: sudokuGameDetail,
-
-  shortDescription:
-    "An interactive Sudoku game powered by algorithm-driven puzzle generation and real-time validation.",
-
-  detailDescription:
-    "Solve Sudoku with real-time feedback and algorithm-generated puzzles.",
-
-  overviewStatement:
-    "This project focuses on building a responsive puzzle experience by combining algorithmic logic with interactive frontend development. It enables users to play dynamically generated Sudoku boards while receiving immediate validation and feedback during gameplay.",
-
-  tech: ["JavaScript", "HTML", "CSS", "Algorithm Design"],
-
-  gradient:
-    "linear-gradient(145deg, rgba(46,46,46,0.96), rgba(122,139,122,0.92) 46%, rgba(245,243,239,0.95))",
-
-  accent: "rgba(216, 167, 177, 0.72)",
-
-  problem:
-    "Many Sudoku implementations are either static or lack responsive interaction, providing limited feedback and engagement. There is a need for a puzzle experience that combines correct board generation, real-time validation, and smooth interaction to support both usability and logical accuracy.",
-
-  features: [
-    "Dynamic Sudoku board generation using a backtracking algorithm.",
-    "Real-time validation of user input across rows, columns, and grids.",
-    "Interactive UI with immediate visual feedback for correct and incorrect entries.",
-    "Multiple difficulty levels with consistent puzzle validity.",
-    "Timer and game state tracking to enhance user engagement.",
-  ],
-
-  implementation: [
-    {
-      title: "Algorithm design",
-      body: "Implemented a backtracking algorithm to generate valid Sudoku boards, ensuring each puzzle satisfies all constraints while supporting different difficulty levels.",
-    },
-    {
-      title: "Game logic",
-      body: "Built validation logic that continuously checks user input against Sudoku rules, enabling real-time feedback without disrupting interaction flow.",
-    },
-    {
-      title: "Frontend interaction",
-      body: "Developed an interactive interface using HTML, CSS, and JavaScript, focusing on responsive input handling and clear visual feedback.",
-    },
-    {
-      title: "State management",
-      body: "Managed game state including board configuration, timer, and user progress to maintain a smooth and consistent gameplay experience.",
-    },
-  ],
-  reflectionTitle:
-    "This project reinforced the importance of translating algorithmic logic into clear and responsive user interactions, ensuring that complex constraint-solving remains intuitive for users.",
-  reflectionBody:
-    "It highlighted how frontend experience and underlying logic must work together—real-time validation, state management, and feedback design all play a role in making the system feel seamless. If I continued the project, I would refine difficulty balancing, optimize performance for faster puzzle generation, and explore more advanced interaction patterns to enhance user engagement.",
-  reflectionTags: ["Algorithmic thinking", "Frontend engineering", "Problem solving"],
-
-  githubUrl: "https://github.com/911219fufu-tech/Sudoku-Game",
-  liveUrl: "https://sudoku-game-indol-ten.vercel.app/",
-},
-  {
-  slug: "joystick-journal",
-  title: "Joystick Journal",
-  discipline: "Fullstack",
-  track: "Engineering Projects",
-  timeline: "Sep 2024 - Jan 2025",
-  cardImage: joystickJournalCover,
-  image: joystickJournalDetail,
-
-  shortDescription:
-    "A full-stack game review platform that allows users to discover, rate, and share opinions on video games through an interactive and user-friendly interface.",
-
-  detailDescription:
-    "A full-stack platform for discovering, reviewing, and sharing video games.",
-
-  overviewStatement:
-    "Joystick Journal is an end-to-end product that combines user-centered design with full-stack development, enabling seamless browsing, reviewing, and real-time interaction with game content.",
-
-  tech: ["React", "Node.js", "MySQL", "Tailwind CSS", "REST API"],
-
-  gradient:
-    "linear-gradient(145deg, rgba(122,139,122,0.96), rgba(245,243,239,0.9) 58%, rgba(216,167,177,0.82))",
-
-  accent: "rgba(46, 46, 46, 0.2)",
-
-  problem:
-    "Many game review platforms are cluttered, difficult to navigate, or lack meaningful interaction, making it hard for users to quickly discover relevant content or share their opinions. There is a need for a platform that balances usability, clarity, and real-time interaction while supporting scalable user-generated content.",
-
-  features: [
-    "Interactive rating and review system with real-time feedback.",
-    "Search and browse functionality for discovering games efficiently.",
-    "User authentication system for personalized experiences.",
-    "Responsive and clean UI designed for clarity and ease of use.",
-    "Dynamic content updates without page reloads.",
-  ],
-
-  implementation: [
-    {
-      title: "UX / UI design",
-      body: "Designed intuitive user flows for browsing, reviewing, and rating games, with a focus on visual hierarchy and clear interaction patterns to enhance usability.",
-    },
-    {
-      title: "Frontend architecture",
-      body: "Built a single-page application using React and React Router, enabling dynamic navigation and seamless user interactions across different views.",
-    },
-    {
-      title: "API & data integration",
-      body: "Integrated RESTful APIs to handle game data, user interactions, and reviews, ensuring consistent communication between frontend and backend.",
-    },
-    {
-      title: "Backend system",
-      body: "Developed backend services using Node.js and Express, implementing authentication, data storage, and database operations with MySQL.",
-    },
-  ],
-  reflectionTitle:
-    "This project reinforced the importance of designing systems that balance user experience with scalable architecture, ensuring that interaction flows remain intuitive while the underlying logic stays maintainable.",
-  reflectionBody:
-    "It also highlighted how frontend and backend decisions are deeply connected—choices in data structure, API design, and state handling directly shape the usability and responsiveness of the product. If I continued the project, I would focus on improving data modeling, expanding features like personalization, and refining performance for larger-scale user interactions.",
-  reflectionTags: ["Fullstack thinking", "System design", "Product thinking"],
-
-  githubUrl: "https://github.com/911219fufu-tech/Game-Review-Platform",
-  liveUrl: "",
-},
-  {
     slug: "chronosense-case-study",
     title: "ChronoSense",
     discipline: "UX/UI",
@@ -426,83 +302,67 @@ export const projects = [
     liveUrl: "https://www.figma.com/",
   },
   {
-  slug: "ready-recipe",
-  title: "ReadyRecipe",
-  discipline: "UX/UI",
-  track: "UX/Product Projects",
-  timeline: "Sep. 2024 - Jan. 2025",
-  cardImage: readyRecipeCover,
-  image: readyRecipeDetail,
+    slug: "joystick-journal",
+    title: "Joystick Journal",
+    discipline: "Fullstack",
+    track: "Engineering Projects",
+    timeline: "Sep 2024 - Jan 2025",
+    cardImage: joystickJournalCover,
+    image: joystickJournalDetail,
 
-  shortDescription:
-    "A recipe-to-action web experience that helps users move from discovering meals to planning and selecting ingredients seamlessly.",
+    shortDescription:
+      "A full-stack game review platform that allows users to discover, rate, and share opinions on video games through an interactive and user-friendly interface.",
 
-  detailDescription:
-    "A UX-driven web prototype that connects recipe discovery with planning and ingredient selection in a unified flow.",
+    detailDescription:
+      "A full-stack platform for discovering, reviewing, and sharing video games.",
 
-  overviewStatement:
-    "ReadyRecipe explores how users can move from inspiration to action without friction. Instead of separating browsing, planning, and purchasing, the experience brings them into a single, continuous flow. The system helps users quickly evaluate recipes, understand requirements, and transition directly into ingredient selection, supporting more confident and efficient decision-making.",
+    overviewStatement:
+      "Joystick Journal is an end-to-end product that combines user-centered design with full-stack development, enabling seamless browsing, reviewing, and real-time interaction with game content.",
 
-  tech: ["Figma", "User Research", "Wireframing", "Interaction Design", "Prototyping"],
+    tech: ["React", "Node.js", "MySQL", "Tailwind CSS", "REST API"],
 
-  gradient:
-    "linear-gradient(145deg, rgba(245,243,239,0.96), rgba(216,167,177,0.9) 48%, rgba(122,139,122,0.85))",
+    gradient:
+      "linear-gradient(145deg, rgba(122,139,122,0.96), rgba(245,243,239,0.9) 58%, rgba(216,167,177,0.82))",
 
-  accent: "rgba(216, 167, 177, 0.35)",
+    accent: "rgba(46, 46, 46, 0.2)",
 
-  problem:
-    "Users often discover recipes but struggle to translate them into actionable steps, needing to manually track ingredients, plan shopping, and switch between multiple tools. This fragmented process creates friction between inspiration and execution, making cooking less efficient and more cognitively demanding.",
+    problem:
+      "Many game review platforms are cluttered, difficult to navigate, or lack meaningful interaction, making it hard for users to quickly discover relevant content or share their opinions. There is a need for a platform that balances usability, clarity, and real-time interaction while supporting scalable user-generated content.",
 
-  features: [
-    "Integrated flow from recipe discovery to ingredient selection within a single interface.",
-    "Clear recipe breakdown with time, difficulty, and required ingredients for quick evaluation.",
-    "Ingredient grouping and simplified selection to reduce decision friction.",
-    "Clean, structured layout that supports scanning and fast comparison between recipes.",
-    "Minimal interaction patterns that prioritize clarity and reduce cognitive load.",
-  ],
+    features: [
+      "Interactive rating and review system with real-time feedback.",
+      "Search and browse functionality for discovering games efficiently.",
+      "User authentication system for personalized experiences.",
+      "Responsive and clean UI designed for clarity and ease of use.",
+      "Dynamic content updates without page reloads.",
+    ],
 
-  implementation: [
-    {
-      title: "End-to-end experience design",
-      body: "Mapped the full journey from discovering a recipe to preparing ingredients, ensuring each step transitions smoothly without context switching.",
-    },
-    {
-      title: "Information architecture",
-      body: "Structured recipe data, ingredients, and actions into a clear hierarchy so users can quickly understand requirements and next steps.",
-    },
-    {
-      title: "Interaction design",
-      body: "Designed low-friction interactions for ingredient selection and workflow progression, minimizing unnecessary steps.",
-    },
-    {
-      title: "Product thinking",
-      body: "Focused on bridging the gap between inspiration and execution by integrating decision-making and action into a single experience.",
-    },
-  ],
+    implementation: [
+      {
+        title: "UX / UI design",
+        body: "Designed intuitive user flows for browsing, reviewing, and rating games, with a focus on visual hierarchy and clear interaction patterns to enhance usability.",
+      },
+      {
+        title: "Frontend architecture",
+        body: "Built a single-page application using React and React Router, enabling dynamic navigation and seamless user interactions across different views.",
+      },
+      {
+        title: "API & data integration",
+        body: "Integrated RESTful APIs to handle game data, user interactions, and reviews, ensuring consistent communication between frontend and backend.",
+      },
+      {
+        title: "Backend system",
+        body: "Developed backend services using Node.js and Express, implementing authentication, data storage, and database operations with MySQL.",
+      },
+    ],
+    reflectionTitle:
+      "This project reinforced the importance of designing systems that balance user experience with scalable architecture, ensuring that interaction flows remain intuitive while the underlying logic stays maintainable.",
+    reflectionBody:
+      "It also highlighted how frontend and backend decisions are deeply connected—choices in data structure, API design, and state handling directly shape the usability and responsiveness of the product. If I continued the project, I would focus on improving data modeling, expanding features like personalization, and refining performance for larger-scale user interactions.",
+    reflectionTags: ["Fullstack thinking", "System design", "Product thinking"],
 
-  actionButtons: [
-    {
-      label: "Prototype",
-      href: "https://www.figma.com/proto/rbPVxdxRR8rQU8L2hB6xKl/ReadyRecipe?node-id=1-2&p=f&t=VB95QKlvuJLFbPbJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
-      variant: "primary",
-    },
-    {
-      label: "Live Demo",
-      href: "https://www.youtube.com/watch?v=yXUzOGBmuSI",
-      variant: "secondary",
-    },
-  ],
-
-  githubUrl: "",
-  liveUrl: "https://www.figma.com/",
-
-  reflectionLead:
-    "This project reinforced the importance of designing complete user journeys rather than isolated screens, focusing on how decisions and actions connect across the experience.",
-
-  reflectionSupporting:
-    "It also highlighted the value of reducing friction between inspiration and execution, ensuring users can move forward without unnecessary complexity. If I continued the project, I would explore deeper validation through usability testing and refine how recommendations adapt to different user contexts.",
-
-  reflectionTags: ["Product thinking", "UX strategy", "Interaction design"],
+    githubUrl: "https://github.com/911219fufu-tech/Game-Review-Platform",
+    liveUrl: "",
   },
   {
     slug: "unlmtd",
@@ -579,11 +439,92 @@ export const projects = [
     reflectionTags: ["Product thinking", "Data-driven UX", "Interaction design"],
   },
   {
+    slug: "ready-recipe",
+    title: "ReadyRecipe",
+    discipline: "UX/UI",
+    track: "UX/Product Projects",
+    timeline: "Sep. 2024 - Jan. 2025",
+    cardImage: readyRecipeCover,
+    image: readyRecipeDetail,
+
+    shortDescription:
+      "A recipe-to-action web experience that helps users move from discovering meals to planning and selecting ingredients seamlessly.",
+
+    detailDescription:
+      "A UX-driven web prototype that connects recipe discovery with planning and ingredient selection in a unified flow.",
+
+    overviewStatement:
+      "ReadyRecipe explores how users can move from inspiration to action without friction. Instead of separating browsing, planning, and purchasing, the experience brings them into a single, continuous flow. The system helps users quickly evaluate recipes, understand requirements, and transition directly into ingredient selection, supporting more confident and efficient decision-making.",
+
+    tech: ["Figma", "User Research", "Wireframing", "Interaction Design", "Prototyping"],
+
+    gradient:
+      "linear-gradient(145deg, rgba(245,243,239,0.96), rgba(216,167,177,0.9) 48%, rgba(122,139,122,0.85))",
+
+    accent: "rgba(216, 167, 177, 0.35)",
+
+    problem:
+      "Users often discover recipes but struggle to translate them into actionable steps, needing to manually track ingredients, plan shopping, and switch between multiple tools. This fragmented process creates friction between inspiration and execution, making cooking less efficient and more cognitively demanding.",
+
+    features: [
+      "Integrated flow from recipe discovery to ingredient selection within a single interface.",
+      "Clear recipe breakdown with time, difficulty, and required ingredients for quick evaluation.",
+      "Ingredient grouping and simplified selection to reduce decision friction.",
+      "Clean, structured layout that supports scanning and fast comparison between recipes.",
+      "Minimal interaction patterns that prioritize clarity and reduce cognitive load.",
+    ],
+
+    implementation: [
+      {
+        title: "End-to-end experience design",
+        body: "Mapped the full journey from discovering a recipe to preparing ingredients, ensuring each step transitions smoothly without context switching.",
+      },
+      {
+        title: "Information architecture",
+        body: "Structured recipe data, ingredients, and actions into a clear hierarchy so users can quickly understand requirements and next steps.",
+      },
+      {
+        title: "Interaction design",
+        body: "Designed low-friction interactions for ingredient selection and workflow progression, minimizing unnecessary steps.",
+      },
+      {
+        title: "Product thinking",
+        body: "Focused on bridging the gap between inspiration and execution by integrating decision-making and action into a single experience.",
+      },
+    ],
+
+    actionButtons: [
+      {
+        label: "Prototype",
+        href: "https://www.figma.com/proto/rbPVxdxRR8rQU8L2hB6xKl/ReadyRecipe?node-id=1-2&p=f&t=VB95QKlvuJLFbPbJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+        variant: "primary",
+      },
+      {
+        label: "Live Demo",
+        href: "https://www.youtube.com/watch?v=yXUzOGBmuSI",
+        variant: "secondary",
+      },
+    ],
+
+    githubUrl: "",
+    liveUrl: "https://www.figma.com/",
+
+    reflectionLead:
+      "This project reinforced the importance of designing complete user journeys rather than isolated screens, focusing on how decisions and actions connect across the experience.",
+
+    reflectionSupporting:
+      "It also highlighted the value of reducing friction between inspiration and execution, ensuring users can move forward without unnecessary complexity. If I continued the project, I would explore deeper validation through usability testing and refine how recommendations adapt to different user contexts.",
+
+    reflectionTags: ["Product thinking", "UX strategy", "Interaction design"],
+  },
+  {
     slug: "us-police-visualization",
-    title: "U.S. Police Data Exploration Platform",
+    title: "U.S. Police Shooting Data Explorer",
     discipline: "Fullstack",
     track: "Data Visualization",
     timeline: "Sep 2023 - Dec 2023",
+    cardImage: usPoliceCover,
+    image: usPoliceDetail,
 
     shortDescription:
       "An interactive data platform that enables users to explore patterns in U.S. police shooting data through dynamic visualizations and filtering.",
@@ -646,6 +587,69 @@ export const projects = [
       "It also highlighted the importance of designing for exploration, where users can interact with data rather than passively consume it. If I continued the project, I would improve the UI clarity and introduce more advanced filtering and storytelling features.",
 
     reflectionTags: ["Fullstack", "Data visualization", "System design"],
+  },
+  {
+    slug: "sudoku-game",
+    title: "Sudoku Game",
+    discipline: "Frontend",
+    track: "Engineering Projects",
+    timeline: "Jan 2026 - Mar 2026",
+    cardImage: sudokuGameCover,
+    image: sudokuGameDetail,
+
+    shortDescription:
+      "An interactive Sudoku game powered by algorithm-driven puzzle generation and real-time validation.",
+
+    detailDescription:
+      "Solve Sudoku with real-time feedback and algorithm-generated puzzles.",
+
+    overviewStatement:
+      "This project focuses on building a responsive puzzle experience by combining algorithmic logic with interactive frontend development. It enables users to play dynamically generated Sudoku boards while receiving immediate validation and feedback during gameplay.",
+
+    tech: ["JavaScript", "HTML", "CSS", "Algorithm Design"],
+
+    gradient:
+      "linear-gradient(145deg, rgba(46,46,46,0.96), rgba(122,139,122,0.92) 46%, rgba(245,243,239,0.95))",
+
+    accent: "rgba(216, 167, 177, 0.72)",
+
+    problem:
+      "Many Sudoku implementations are either static or lack responsive interaction, providing limited feedback and engagement. There is a need for a puzzle experience that combines correct board generation, real-time validation, and smooth interaction to support both usability and logical accuracy.",
+
+    features: [
+      "Dynamic Sudoku board generation using a backtracking algorithm.",
+      "Real-time validation of user input across rows, columns, and grids.",
+      "Interactive UI with immediate visual feedback for correct and incorrect entries.",
+      "Multiple difficulty levels with consistent puzzle validity.",
+      "Timer and game state tracking to enhance user engagement.",
+    ],
+
+    implementation: [
+      {
+        title: "Algorithm design",
+        body: "Implemented a backtracking algorithm to generate valid Sudoku boards, ensuring each puzzle satisfies all constraints while supporting different difficulty levels.",
+      },
+      {
+        title: "Game logic",
+        body: "Built validation logic that continuously checks user input against Sudoku rules, enabling real-time feedback without disrupting interaction flow.",
+      },
+      {
+        title: "Frontend interaction",
+        body: "Developed an interactive interface using HTML, CSS, and JavaScript, focusing on responsive input handling and clear visual feedback.",
+      },
+      {
+        title: "State management",
+        body: "Managed game state including board configuration, timer, and user progress to maintain a smooth and consistent gameplay experience.",
+      },
+    ],
+    reflectionTitle:
+      "This project reinforced the importance of translating algorithmic logic into clear and responsive user interactions, ensuring that complex constraint-solving remains intuitive for users.",
+    reflectionBody:
+      "It highlighted how frontend experience and underlying logic must work together—real-time validation, state management, and feedback design all play a role in making the system feel seamless. If I continued the project, I would refine difficulty balancing, optimize performance for faster puzzle generation, and explore more advanced interaction patterns to enhance user engagement.",
+    reflectionTags: ["Algorithmic thinking", "Frontend engineering", "Problem solving"],
+
+    githubUrl: "https://github.com/911219fufu-tech/Sudoku-Game",
+    liveUrl: "https://sudoku-game-indol-ten.vercel.app/",
   },
 ];
 
