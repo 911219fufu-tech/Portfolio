@@ -4,6 +4,10 @@ import readyRecipeCover from "../assets/projects/readyrecipe-cover.jpeg";
 import readyRecipeDetail from "../assets/projects/readyrecipe-detail.jpeg";
 import sudokuGameCover from "../assets/projects/sudokugame-cover.png";
 import sudokuGameDetail from "../assets/projects/sudokugame-detail.png";
+import joystickJournalCover from "../assets/projects/joystickjournal-cover.png";
+import joystickJournalDetail from "../assets/projects/joystickjournal-detail.png";
+import chronosenseCover from "../assets/projects/chronosense-cover.png";
+import chronosenseDetail from "../assets/projects/chronosense-detail.png";
 
 export const navItems = [
   { path: "/", label: "Home" },
@@ -288,6 +292,8 @@ export const projects = [
   discipline: "Fullstack",
   track: "Engineering Projects",
   timeline: "Sep 2024 - Jan 2025",
+  cardImage: joystickJournalCover,
+  image: joystickJournalDetail,
 
   shortDescription:
     "A full-stack game review platform that allows users to discover, rate, and share opinions on video games through an interactive and user-friendly interface.",
@@ -349,6 +355,8 @@ export const projects = [
     discipline: "UX/UI",
     track: "UX/Product Projects",
     timeline: "FigBuild 2026 (Mar)",
+    cardImage: chronosenseCover,
+    image: chronosenseDetail,
     tag: ["Hackathon Project", "FigBuild 2026"],
     shortDescription:
       "A time-awareness app that helps users understand attention patterns and build more intentional workflows.",
