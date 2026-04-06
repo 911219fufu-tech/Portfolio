@@ -2,6 +2,8 @@ import unlmedDetail from "../assets/projects/unlmed-detail.png";
 import unlmtdCover from "../assets/projects/unlmtd-cover.jpeg";
 import readyRecipeCover from "../assets/projects/readyrecipe-cover.jpeg";
 import readyRecipeDetail from "../assets/projects/readyrecipe-detail.jpeg";
+import sudokuGameCover from "../assets/projects/sudokugame-cover.png";
+import sudokuGameDetail from "../assets/projects/sudokugame-detail.png";
 
 export const navItems = [
   { path: "/", label: "Home" },
@@ -223,6 +225,8 @@ export const projects = [
   discipline: "Frontend",
   track: "Engineering Projects",
   timeline: "Jan 2026 - Mar 2026",
+  cardImage: sudokuGameCover,
+  image: sudokuGameDetail,
 
   shortDescription:
     "An interactive Sudoku game powered by algorithm-driven puzzle generation and real-time validation.",
