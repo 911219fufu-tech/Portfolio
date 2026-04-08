@@ -10,6 +10,8 @@ import chronosenseCover from "../assets/projects/chronosense-cover.png";
 import chronosenseDetail from "../assets/projects/chronosense-detail.png";
 import usPoliceCover from "../assets/projects/uspolice.png";
 import usPoliceDetail from "../assets/projects/uspolice-detail.png";
+import jfBrokerMapCover from "../assets/projects/jfbrokermap-cover.png";
+import jfBrokerMapDetail from "../assets/projects/jfbrokermap-detail.png";
 
 export const navItems = [
   { path: "/", label: "Home" },
@@ -231,6 +233,8 @@ export const projects = [
     discipline: "UX/UI + Frontend",
     track: "Product / Internal Tools",
     timeline: "Apr. 2026 - Present",
+    cardImage: jfBrokerMapCover,
+    image: jfBrokerMapDetail,
     shortDescription:
       "A map-based workflow dashboard that helps leasing agents manage properties, pricing, and fragmented information in one unified interface.",
     detailDescription:
