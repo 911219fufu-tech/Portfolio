@@ -7,13 +7,21 @@ import { projects } from "../data/portfolioData";
 
 const filters = ["All", "Frontend", "UX/UI", "Fullstack"];
 
+function matchesDiscipline(projectDiscipline, activeFilter) {
+  if (activeFilter === "All") return true;
+
+  return projectDiscipline
+    .split("+")
+    .map((item) => item.trim())
+    .includes(activeFilter);
+}
+
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((project) => project.discipline === activeFilter);
+  const filteredProjects = projects.filter((project) =>
+    matchesDiscipline(project.discipline, activeFilter),
+  );
 
   return (
     <AnimatedSection id="projects" revealOnScroll={false}>

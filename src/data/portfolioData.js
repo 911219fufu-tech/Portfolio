@@ -226,6 +226,56 @@ export const beyondCodingTabs = [
 
 export const projects = [
   {
+    slug: "broker-map",
+    title: "BrokerMap: Leasing Workflow Dashboard",
+    discipline: "UX/UI + Frontend",
+    track: "Product / Internal Tools",
+    timeline: "Apr. 2026 - Present",
+    shortDescription:
+      "A map-based workflow dashboard that helps leasing agents manage properties, pricing, and fragmented information in one unified interface.",
+    detailDescription:
+      "A UX/UI and frontend dashboard that transforms scattered property data into a structured, interactive workflow for real estate agents.",
+    overviewStatement:
+      "BrokerMap was designed based on real-world leasing workflows to solve the problem of fragmented information across multiple platforms. Instead of switching between Google Maps, property websites, emails, and personal notes, this system consolidates location, pricing, availability, OP, and personal insights into a single interactive dashboard.",
+    tech: ["React", "Mapbox", "Tailwind CSS", "Vite", "LocalStorage"],
+    gradient:
+      "linear-gradient(145deg, rgba(122,139,122,0.9), rgba(255,255,255,0.96) 50%, rgba(216,167,177,0.85))",
+    accent: "rgba(122, 139, 122, 0.35)",
+    problem:
+      "Leasing agents often work with fragmented information spread across maps, property websites, emails, and personal notes. This makes it difficult to quickly locate buildings, compare options, and make decisions efficiently.",
+    features: [
+      "Map-based visualization of buildings with interactive markers and spatial context.",
+      "Advanced filtering by area, price range, and apartment type for fast decision-making.",
+      "Structured building data including pricing, inventory, OP, availability, and contacts.",
+      "Personal workflow tools such as notes, favorites, and recently viewed tracking using localStorage.",
+      "Linked interactions between map, list, and detail panel for seamless exploration.",
+    ],
+    implementation: [
+      {
+        title: "Workflow-driven design",
+        body: "Designed the interface around real leasing workflows, prioritizing speed, decision-making, and reduced context switching.",
+      },
+      {
+        title: "Frontend data modeling",
+        body: "Structured building data with pricing ranges, inventory details, and operational attributes such as OP and availability to support clear browsing and comparison.",
+      },
+      {
+        title: "Map interaction system",
+        body: "Implemented Mapbox with dynamic markers, zoom-based behavior, and synchronized interactions between the map, building list, and detail panel.",
+      },
+      {
+        title: "Local state persistence",
+        body: "Used localStorage to preserve user-specific workflow data such as notes, favorites, and recently viewed items without requiring a backend.",
+      },
+    ],
+    actionButtons: [],
+    reflectionLead:
+      "This project demonstrated how real-world workflows can be translated into a structured product experience through UX thinking and frontend implementation.",
+    reflectionSupporting:
+      "It also highlighted the value of designing internal tools around speed, context, and decision-making rather than visual complexity alone. If I continued the project, I would extend it with backend integration and real-time data syncing.",
+    reflectionTags: ["Product design", "UX/UI", "Frontend development"],
+  },
+  {
     slug: "chronosense-case-study",
     title: "ChronoSense",
     discipline: "UX/UI",
