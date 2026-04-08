@@ -227,7 +227,7 @@ export const beyondCodingTabs = [
 export const projects = [
   {
     slug: "broker-map",
-    title: "BrokerMap: Leasing Workflow Dashboard",
+    title: "JF BrokerMap",
     discipline: "UX/UI + Frontend",
     track: "Product / Internal Tools",
     timeline: "Apr. 2026 - Present",
