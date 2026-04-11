@@ -17,6 +17,7 @@ export const navItems = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
   { path: "/projects", label: "Projects" },
+  { path: "/experience", label: "Experience" },
   { path: "/education", label: "Education" },
   { path: "/skills", label: "Skills" },
   { path: "/contact", label: "Contact" },
@@ -704,6 +705,37 @@ export const projects = [
 
     githubUrl: "https://github.com/911219fufu-tech/Sudoku-Game",
     liveUrl: "https://sudoku-game-indol-ten.vercel.app/",
+  },
+];
+
+export const experienceItems = [
+  {
+    role: "Independent Seller / Small Business Operator",
+    organization: "Self-employed",
+    type: "Independent Business",
+    timeline: "2 Years",
+    summary:
+      "Ran a small business focused on proxy purchasing and fan merchandise, managing customer communication, sourcing, pricing, and fulfillment end to end.",
+    highlights: [
+      "Handled the full workflow from product sourcing and pricing to customer updates, order tracking, and delivery coordination.",
+      "Built practical systems for organizing requests, managing inventory, and keeping operations clear across multiple moving parts.",
+      "Strengthened my understanding of customer trust, expectation management, and how operational clarity shapes the overall user experience.",
+    ],
+    tags: ["Operations", "Customer experience", "Workflow design"],
+  },
+  {
+    role: "Real Estate Leasing",
+    organization: "Residential Leasing",
+    type: "Client-facing Experience",
+    timeline: "Present",
+    summary:
+      "Work within fast-moving leasing workflows that require organizing fragmented property information, comparing options quickly, and communicating clearly with clients.",
+    highlights: [
+      "Coordinate property details such as pricing, availability, neighborhood context, and listing differences to support faster decision-making.",
+      "Operate in a workflow where information is often scattered across maps, websites, messages, and personal notes.",
+      "This experience directly shaped my perspective on internal tools and informed the design direction of JF BrokerMap.",
+    ],
+    tags: ["Client communication", "Decision-making", "Product insight"],
   },
 ];
 
