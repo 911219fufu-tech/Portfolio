@@ -858,8 +858,8 @@ export const contactLinks = [
   {
     type: "email",
     label: "Email",
-    value: "jf5456@gmail.com",
-    href: "mailto:jf5456@gmail.com",
+    value: "jf5456@nyu.edu",
+    href: "mailto:jf5456@nyu.edu",
   },
   {
     type: "phone",
